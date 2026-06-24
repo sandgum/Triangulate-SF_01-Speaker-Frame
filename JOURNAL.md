@@ -25,3 +25,18 @@ Finally, I had to make the actual housing for the tweeters, as currently they we
 <img width="1386" height="900" alt="image" src="https://github.com/user-attachments/assets/042e0ca0-734e-4231-bf40-03d22e4d340b" />
 <img width="400" height="900" alt="image" src="https://github.com/user-attachments/assets/1bf897cc-50af-4e6b-82a9-349adab15214" />
 
+# Devlog 2: Designed the Subwoofer Box
+
+Immediately upon finishing the design of the main frame, I started grinding out the subwoofer box that would go behind the monitor. As I had a huge amount of space behind the frame, I thought that maybe I should add... I don't know... FOUR extra bass-mid woofers to the design??? Since each of the drivers consumes around 30W, that would result in more than 180W of RMS power output... JUST FROM THE BASS DRIVERS. To put that into perspective, the 6 inch subwoofer used in my home theatre setup is 150W... so this should make for a ridiculous sound system.
+
+To make the box itself, I used 5mm thick walls all around the box, and 10mm thick walls to hold the drivers themselves in. That should provide more than enough structural bracing for the 3D-printed box to hold itself together when the full 180W of driver power is unleashed within it. To make the box even stronger, I hollowed out a section right in the middle of the box for VESA mounts and the basic electronics of the whole system.
+
+I'm super proud of this design feature in particular, which allows me to assemble the whole picture frame and secure all load-bearing components to it using the standard 100x100mm VESA mount the monitor comes with. That same VESA mount will also be used for securing the stand or the wall-mount accessory to the frame, so it's a really smart design feature.
+
+Anyways, there's not that much more I can talk about regarding a literal box, so that's all for this devlog!
+
+<img width="1912" height="1182" alt="image" src="https://github.com/user-attachments/assets/8cace9af-9fe8-4a95-8d67-dc2311c542f3" />
+<img width="1912" height="1182" alt="image" src="https://github.com/user-attachments/assets/ac89b385-21d2-4f38-a47c-0364b34dc0c1" />
+<img width="1912" height="1182" alt="image" src="https://github.com/user-attachments/assets/9da84a2b-176c-4cd0-972c-de71955f024a" />
+
+
