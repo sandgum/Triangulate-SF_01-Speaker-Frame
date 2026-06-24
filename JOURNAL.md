@@ -1,6 +1,10 @@
 # Devlog 1: Started the Design
 
-Preface: I already have 4 additional hours logged on the Lookout app, but have no way of having Hackatime recognise those 4 hours. That is where I started the design and completed most of the things I detail in this devlog.
+Preface: I already have 4 additional hours logged on the Lookout app, but have no way of having Hackatime recognise those 4 hours. That is where I started the design and completed most of the things I detail in this devlog. Here is the proof:
+
+<img width="3024" height="4032" alt="IMG_1385" src="https://github.com/user-attachments/assets/7beb6ee7-f463-4062-b33d-d67d323ca7d8" />
+
+Now, onto the real devlog.
 
 Soooooo, my parents are crazy about getting a digital picture frame, and after resarching, they were able to find... either hundreds of cheap RK3326-based Android picture frames (which aren't even that big), or amazing speakers from IKEA or Samsung *disguised* as frames, but not actually having screens.
 I actually really like the idea of a digital picture frame with a speaker, and an ACTUALLY GOOD speaker at that (so it's not just a TV). So I started researching, using my knowledge in audio and electronics systems to try and find optimal components for what I am trying to do.
@@ -39,4 +43,12 @@ Anyways, there's not that much more I can talk about regarding a literal box, so
 <img width="1912" height="1182" alt="image" src="https://github.com/user-attachments/assets/ac89b385-21d2-4f38-a47c-0364b34dc0c1" />
 <img width="1912" height="1182" alt="image" src="https://github.com/user-attachments/assets/9da84a2b-176c-4cd0-972c-de71955f024a" />
 
+# Devlog 3: Splitting the Frame, and Ingenious Assembly!
 
+I want the SF_01 to be 3D-printed without incurring too many costs. The main driver for cost in 3D-Printing is the size of the part, as bigger parts require bigger and exponentially expensive and inaccessible printers to print. That's why I want the SF_01 to be entirely printable in a standard 256x256x256mm build volume used by Bambu Lab.
+
+Since the frame is 24 inches diagonally, it results in the largest dimension of the frame being over half a metre long, which requires it to be split into a minimum of 6 parts. For the main frame, those 6 parts are just the four corners of the frame plus two straight middle sections. Splitting the frame into parts is also what crucially allows for the monitor to slide into it in the first place, with it being held securely after that.
+
+That's why I designed the main frame to be assembled into two main parts: a top and bottom part. The three top and bottom parts will be permanently glued together, but the two halves can join up and be removed at any time. How will I accomplish the two main parts being securely held together without compromising the aesthetics of the frame via unsightly screws, all while making sure the frame is repairable?
+
+That's where the subwoofer box comes into play. I designed the box to hold 6 drivers, all of which face towards the outside of the frame. Each speaker requires four mounting screws to secure it into place, which I used to my advantage. I intentionally used cap-head screws, which stick out quite a distance from the drivers when screwed in. Those cap head screws then slide into grooves in the main frame from the back, holding the two pieces together! Finally, the subwoofer box is secured from the back with VESA screws, and the whole thing is securely assembled, with only those 4 VESA screws holding the entire frame together!
