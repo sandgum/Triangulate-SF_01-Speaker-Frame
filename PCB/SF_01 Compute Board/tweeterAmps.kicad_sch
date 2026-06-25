@@ -3194,7 +3194,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 63.5) (xy 80.01 63.5)
+			(xy 68.58 63.5) (xy 129.54 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3231,16 +3231,6 @@
 			(type default)
 		)
 		(uuid "5158fd93-2d20-44c7-a001-6f0796a49f08")
-	)
-	(wire
-		(pts
-			(xy 35.56 153.67) (xy 77.47 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51daf50c-82d6-404f-bd97-4590a67ed641")
 	)
 	(wire
 		(pts
@@ -4044,26 +4034,6 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 166.37) (xy 77.47 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9acdf13b-1d57-441a-9815-a5fff396d737")
-	)
-	(wire
-		(pts
-			(xy 87.63 76.2) (xy 129.54 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9dcb2fef-1420-4b3a-b566-3e39c8156e62")
-	)
-	(wire
-		(pts
 			(xy 59.69 135.89) (xy 64.77 135.89)
 		)
 		(stroke
@@ -4464,16 +4434,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 63.5) (xy 129.54 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce15d9f8-2695-4002-b3c5-a0b861ea1a69")
-	)
-	(wire
-		(pts
 			(xy 177.8 113.03) (xy 177.8 149.86)
 		)
 		(stroke
@@ -4494,7 +4454,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 153.67) (xy 27.94 153.67)
+			(xy 25.4 153.67) (xy 77.47 153.67)
 		)
 		(stroke
 			(width 0)
@@ -4514,7 +4474,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 166.37) (xy 27.94 166.37)
+			(xy 25.4 166.37) (xy 77.47 166.37)
 		)
 		(stroke
 			(width 0)
@@ -4624,7 +4584,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 76.2) (xy 80.01 76.2)
+			(xy 68.58 76.2) (xy 129.54 76.2)
 		)
 		(stroke
 			(width 0)
@@ -5076,7 +5036,7 @@
 	)
 	(global_label "TWEETER_1"
 		(shape input)
-		(at 77.47 76.2 180)
+		(at 68.58 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5086,7 +5046,7 @@
 		)
 		(uuid "199a1b4b-0c3a-4216-b6bc-651d9a1a19ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 64.2041 76.2 0)
+			(at 55.3141 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5220,7 +5180,7 @@
 	)
 	(global_label "TWEETER_2"
 		(shape input)
-		(at 77.47 63.5 180)
+		(at 68.58 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5230,7 +5190,7 @@
 		)
 		(uuid "8facae89-352c-4443-a38c-ba935ce21a1e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 64.2041 63.5 0)
+			(at 55.3141 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9229,87 +9189,6 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 83.82 63.5 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6ce97dc2-08c6-4092-851f-068ec3c65727")
-		(property "Reference" "C129"
-			(at 85.344 59.69 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 85.344 57.15 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 87.63 62.5348 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 83.82 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "777f7698-a11e-4c7a-b6d1-9bb996a2ce78")
-		)
-		(pin "2"
-			(uuid "edd4e09f-02b1-4671-a747-e70ab4efc1be")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "C129")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 215.9 40.64 180)
 		(unit 1)
 		(body_style 1)
@@ -9788,87 +9667,6 @@
 			(project "SF_01 Compute Board"
 				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
 					(reference "R56")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 31.75 153.67 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "792c683c-a4ac-44c0-a072-862dba54fc73")
-		(property "Reference" "C157"
-			(at 33.274 149.86 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 33.274 147.32 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 35.56 152.7048 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 31.75 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 31.75 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1efe7a3f-8da3-4eaf-bd48-611c2b079e9d")
-		)
-		(pin "2"
-			(uuid "0fedf904-9c55-4152-a1b6-d72a5ece01c6")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "C157")
 					(unit 1)
 				)
 			)
@@ -12898,87 +12696,6 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 83.82 76.2 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d28e6ebb-7796-45fb-b12a-b3700c811a81")
-		(property "Reference" "C130"
-			(at 76.454 72.644 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 76.454 70.104 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 87.63 75.2348 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 83.82 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42fef2b8-b4a5-4143-aeef-3d0a83d5b5e8")
-		)
-		(pin "2"
-			(uuid "1f2e7cb3-c01d-45ad-b830-575b28d679bd")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "C130")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 121.92 166.37 90)
 		(unit 1)
 		(body_style 1)
@@ -13941,87 +13658,6 @@
 			(project "SF_01 Compute Board"
 				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
 					(reference "C141")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 31.75 166.37 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ed31b985-739b-4337-a09d-73f201583366")
-		(property "Reference" "C158"
-			(at 24.384 162.814 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 24.384 160.274 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 35.56 165.4048 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 31.75 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 31.75 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8058f0ef-b19b-4d2b-a767-331188333561")
-		)
-		(pin "2"
-			(uuid "1fdee2ad-773e-46c8-a483-6061316dcad4")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "C158")
 					(unit 1)
 				)
 			)
