@@ -5528,16 +5528,6 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 135.89) (xy 52.07 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "03351353-0f67-4a61-9524-ba8a4ad27215")
-	)
-	(wire
-		(pts
 			(xy 137.16 172.72) (xy 137.16 177.8)
 		)
 		(stroke
@@ -11101,83 +11091,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 52.07 135.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2b560439-c309-4640-8405-8a5deac2907f")
-		(property "Reference" "#PWR082"
-			(at 52.07 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SYS_5V"
-			(at 49.276 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 52.07 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 52.07 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c363ee71-f3e0-40e5-8e5c-d0d83e27ee12")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/9ef467e3-867c-4e70-a655-081007eb82a8"
-					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "LED:WS2812B")
 		(at 129.54 187.96 270)
 		(unit 1)
@@ -12584,22 +12497,22 @@
 			)
 		)
 		(pin "B2"
-			(uuid "f80bee39-2cc3-4522-91a0-f069c3aa6420")
+			(uuid "f80bee39-2cc3-4522-91a0-f069c3aa6421")
 		)
 		(pin "A1"
-			(uuid "5d425988-725a-4c5f-ac79-260ab0ae93bc")
+			(uuid "5d425988-725a-4c5f-ac79-260ab0ae93bd")
 		)
 		(pin "B1"
-			(uuid "5996df11-7ae8-4df4-89fd-b502336f967b")
+			(uuid "5996df11-7ae8-4df4-89fd-b502336f967c")
 		)
 		(pin "A2"
-			(uuid "010ecdf0-499e-44f1-a2ec-b2a6d543631b")
+			(uuid "010ecdf0-499e-44f1-a2ec-b2a6d543631c")
 		)
 		(pin "C1"
-			(uuid "9abad0fd-eef7-4611-8a3c-f6fc1d8d6af2")
+			(uuid "9abad0fd-eef7-4611-8a3c-f6fc1d8d6af3")
 		)
 		(pin "C2"
-			(uuid "0a19a8b0-c077-4b74-9c01-f04778f0251b")
+			(uuid "0a19a8b0-c077-4b74-9c01-f04778f0251c")
 		)
 		(instances
 			(project "SF_01 Compute Board"
@@ -15218,22 +15131,22 @@
 			)
 		)
 		(pin "B2"
-			(uuid "2ad16e5d-0482-4cc8-bd36-ed58ec5ba0c5")
+			(uuid "2ad16e5d-0482-4cc8-bd36-ed58ec5ba0c6")
 		)
 		(pin "C2"
-			(uuid "25a53347-0bdf-426a-a386-1c94b5379ef1")
+			(uuid "25a53347-0bdf-426a-a386-1c94b5379ef2")
 		)
 		(pin "A1"
-			(uuid "4d72c1b1-e292-4a47-ac43-16060b265f58")
+			(uuid "4d72c1b1-e292-4a47-ac43-16060b265f59")
 		)
 		(pin "A2"
-			(uuid "23a28d0e-9306-4a1e-8c72-c277898bc229")
+			(uuid "23a28d0e-9306-4a1e-8c72-c277898bc22a")
 		)
 		(pin "C1"
-			(uuid "02f1d885-4cbb-49ca-9b44-dca77f7c3a66")
+			(uuid "02f1d885-4cbb-49ca-9b44-dca77f7c3a67")
 		)
 		(pin "B1"
-			(uuid "252a1278-178c-40fe-a002-f1c0c00a3ae0")
+			(uuid "252a1278-178c-40fe-a002-f1c0c00a3ae1")
 		)
 		(instances
 			(project "SF_01 Compute Board"
@@ -17182,22 +17095,22 @@
 			)
 		)
 		(pin "A1"
-			(uuid "e39466bb-876f-46e6-b2db-382ee3e93b67")
+			(uuid "e39466bb-876f-46e6-b2db-382ee3e93b68")
 		)
 		(pin "B2"
-			(uuid "75275637-d747-42a6-ba71-d9412b69aace")
+			(uuid "75275637-d747-42a6-ba71-d9412b69aacf")
 		)
 		(pin "C1"
-			(uuid "8a3a17e3-29b5-47f6-a611-097e56858c75")
+			(uuid "8a3a17e3-29b5-47f6-a611-097e56858c76")
 		)
 		(pin "A2"
-			(uuid "06f21c30-7d4c-44ab-af72-9f4921b842d3")
+			(uuid "06f21c30-7d4c-44ab-af72-9f4921b842d4")
 		)
 		(pin "C2"
-			(uuid "c3526fb4-adc4-45f4-b6ae-568a61170a7a")
+			(uuid "c3526fb4-adc4-45f4-b6ae-568a61170a7b")
 		)
 		(pin "B1"
-			(uuid "e141a976-2222-4f5a-8083-28100301cdac")
+			(uuid "e141a976-2222-4f5a-8083-28100301cdad")
 		)
 		(instances
 			(project "SF_01 Compute Board"
@@ -17672,22 +17585,22 @@
 			)
 		)
 		(pin "A2"
-			(uuid "b4369f9c-5c4b-4c64-9229-3e707de2cfd0")
+			(uuid "b4369f9c-5c4b-4c64-9229-3e707de2cfd1")
 		)
 		(pin "C2"
-			(uuid "e983e04e-3c2c-4414-89af-f949d07cc917")
+			(uuid "e983e04e-3c2c-4414-89af-f949d07cc918")
 		)
 		(pin "A1"
-			(uuid "c33f01b3-ccf9-4194-b689-f154c25b66c5")
+			(uuid "c33f01b3-ccf9-4194-b689-f154c25b66c6")
 		)
 		(pin "B2"
-			(uuid "4184121f-1846-4249-99ef-9dd860a2dbf2")
+			(uuid "4184121f-1846-4249-99ef-9dd860a2dbf3")
 		)
 		(pin "B1"
-			(uuid "4d895556-1f64-4413-9d25-48bad9787fea")
+			(uuid "4d895556-1f64-4413-9d25-48bad9787feb")
 		)
 		(pin "C1"
-			(uuid "e619ae6f-2f4c-4e0a-9615-8e8aff7170c7")
+			(uuid "e619ae6f-2f4c-4e0a-9615-8e8aff7170c8")
 		)
 		(instances
 			(project "SF_01 Compute Board"
@@ -18094,22 +18007,22 @@
 			)
 		)
 		(pin "B2"
-			(uuid "fc3066cd-a5d2-458f-8d54-d66f46a8c2e6")
+			(uuid "fc3066cd-a5d2-458f-8d54-d66f46a8c2e7")
 		)
 		(pin "C1"
-			(uuid "5d3c1e10-fe0d-49c4-bc47-3d78dc764fa6")
+			(uuid "5d3c1e10-fe0d-49c4-bc47-3d78dc764fa7")
 		)
 		(pin "A1"
-			(uuid "6e052bcc-6e23-40d2-bec1-69374a1edbe2")
+			(uuid "6e052bcc-6e23-40d2-bec1-69374a1edbe3")
 		)
 		(pin "B1"
-			(uuid "db64e315-2557-4461-9023-2c278c90eda2")
+			(uuid "db64e315-2557-4461-9023-2c278c90eda3")
 		)
 		(pin "A2"
-			(uuid "4ce5f031-5208-4e09-ad1a-16b87d5225af")
+			(uuid "4ce5f031-5208-4e09-ad1a-16b87d5225b0")
 		)
 		(pin "C2"
-			(uuid "b674e892-60d3-4397-947f-699929ce7870")
+			(uuid "b674e892-60d3-4397-947f-699929ce7871")
 		)
 		(instances
 			(project "SF_01 Compute Board"
@@ -18705,22 +18618,22 @@
 			)
 		)
 		(pin "B2"
-			(uuid "50afe6b6-71ec-446c-87ba-98ceb67b912c")
+			(uuid "50afe6b6-71ec-446c-87ba-98ceb67b912d")
 		)
 		(pin "A1"
-			(uuid "93010d1b-bf65-41a5-a409-e028f326cc48")
+			(uuid "93010d1b-bf65-41a5-a409-e028f326cc49")
 		)
 		(pin "C1"
-			(uuid "17728f08-7e77-4eca-afe2-459742136707")
+			(uuid "17728f08-7e77-4eca-afe2-459742136708")
 		)
 		(pin "A2"
-			(uuid "b5f65723-1095-4597-89b0-f71ac0fa8777")
+			(uuid "b5f65723-1095-4597-89b0-f71ac0fa8778")
 		)
 		(pin "C2"
-			(uuid "a15f4c31-25d9-4ee7-9f88-459f7d7bbcc6")
+			(uuid "a15f4c31-25d9-4ee7-9f88-459f7d7bbcc7")
 		)
 		(pin "B1"
-			(uuid "efd8d87c-2410-4797-90ba-f48a88b337ba")
+			(uuid "efd8d87c-2410-4797-90ba-f48a88b337bb")
 		)
 		(instances
 			(project "SF_01 Compute Board"
