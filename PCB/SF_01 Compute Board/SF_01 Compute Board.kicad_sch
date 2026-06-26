@@ -21234,22 +21234,22 @@
 			)
 		)
 		(pin "3"
-			(uuid "85808b0f-aee6-4d65-b61b-a9a5b545bd8a")
+			(uuid "85808b0f-aee6-4d65-b61b-a9a5b545bd8b")
 		)
 		(pin "1"
-			(uuid "5d12b5be-b8c8-4ef6-b43e-0ebff751dbb7")
+			(uuid "5d12b5be-b8c8-4ef6-b43e-0ebff751dbb8")
 		)
 		(pin "2"
-			(uuid "852eb05e-f97d-477a-89ad-ec2162053f2d")
+			(uuid "852eb05e-f97d-477a-89ad-ec2162053f2e")
 		)
 		(pin "5"
-			(uuid "74584e41-bf17-4112-909d-e1dc5b367737")
+			(uuid "74584e41-bf17-4112-909d-e1dc5b367738")
 		)
 		(pin "4"
-			(uuid "1fc2fcbe-12d2-4ad4-a92b-32a4386113c3")
+			(uuid "1fc2fcbe-12d2-4ad4-a92b-32a4386113c4")
 		)
 		(pin "6"
-			(uuid "3a7a38d9-2dc1-4337-922d-72bae9395670")
+			(uuid "3a7a38d9-2dc1-4337-922d-72bae9395671")
 		)
 		(instances
 			(project "SF_01 Compute Board"
