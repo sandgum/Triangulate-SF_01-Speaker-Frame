@@ -61,8 +61,11 @@ After going through a DAC, the audio signals are routed through a custom analog 
 **Raspberry Pi Circuit**
 <img width="1392" height="957" alt="image" src="https://github.com/user-attachments/assets/4e6586a7-b9e4-4d58-a416-6197ec918669" />
 
-**ESP32-S3 WROOM 2, DAC, and Analog Multiplexer Circuit**
-<img width="1391" height="957" alt="image" src="https://github.com/user-attachments/assets/323b8b12-f4ce-495f-bf42-821a2fb0e9cf" />
+**DAC and Analog Multiplexer Circuit**
+<img width="1357" height="931" alt="image" src="https://github.com/user-attachments/assets/e05115d2-ed6b-49c4-a719-acbef690f496" />
+
+**ESP32 WROVER E Circuit**
+<img width="1283" height="882" alt="image" src="https://github.com/user-attachments/assets/e32255ee-b3b8-48e8-a572-b41222ff93d8" />
 
 **Subwoofer Amplifiers**
 <img width="1365" height="938" alt="image" src="https://github.com/user-attachments/assets/40cbeb7e-c0ed-413e-9cf4-61133022d3c8" />
@@ -77,25 +80,25 @@ After going through a DAC, the audio signals are routed through a custom analog 
 
 **Top Layer**
 
-<img width="861" height="875" alt="image" src="https://github.com/user-attachments/assets/e17862ed-20ec-48e4-8a94-da0f503d47aa" />
+<img width="908" height="927" alt="image" src="https://github.com/user-attachments/assets/e3b37884-7fcc-41e7-af7b-bc0f2b765942" />
 
 **Inner Layer 1 (GND Plane)**
 
-<img width="863" height="874" alt="image" src="https://github.com/user-attachments/assets/98790b68-4020-4938-a085-4953629ab812" />
+<img width="915" height="926" alt="image" src="https://github.com/user-attachments/assets/474cf403-76ba-4cf7-9a2d-6c7099cceecf" />
 
 **Inner Layer 2**
 
-<img width="861" height="873" alt="image" src="https://github.com/user-attachments/assets/d0946664-fb87-4927-9d56-51dfb6d19a80" />
+<img width="911" height="925" alt="image" src="https://github.com/user-attachments/assets/62ca37e4-bd6b-466e-a23b-0c6188ee2246" />
 
 **Bottom Layer**
 
-<img width="863" height="874" alt="image" src="https://github.com/user-attachments/assets/84ba6ff9-edc8-4309-8c21-b397a868e178" />
+<img width="912" height="925" alt="image" src="https://github.com/user-attachments/assets/83138e29-fd7b-44f4-b36e-6536562548ec" />
 
 **3D Model**
 
-<img width="1095" height="970" alt="image" src="https://github.com/user-attachments/assets/0bca1d1f-0021-4333-89ff-2c280dfc69cd" />
-<img width="941" height="876" alt="image" src="https://github.com/user-attachments/assets/997649e2-7f81-4d21-bf98-7dd0480ce3e5" />
-
+<img width="869" height="947" alt="image" src="https://github.com/user-attachments/assets/33ebc589-4067-4d1e-99b0-52d9e8d46e8b" />
+<img width="935" height="984" alt="image" src="https://github.com/user-attachments/assets/038b8b9a-c50b-41e3-82f6-1065b8220d1d" />
+<img width="769" height="933" alt="image" src="https://github.com/user-attachments/assets/10bf3d57-32da-43fd-b0f4-873b48c9d47c" />
 
 ## Bill Of Materials
 *Coming soon*
