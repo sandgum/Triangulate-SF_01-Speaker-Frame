@@ -83,4 +83,29 @@ My schematic went from relatively simple to having SEVEN audio switches and bein
 
 The five amplifiers I selected were with care, as choosing the wrong ICs can make or break my project. Having multiple amplifiers outputting together also calls for a feature that I didn't know existed up until now, which was the ability to sync the clocks of all the amplifiers together. With my power requirements in mind, I found the Texas Instruments TPA31xxD2 series of amplifiers, which includes three chips of varying amplifier power. The whole family is pin-compatible, so it's perfect for my application as I can just reuse the schematic diagram of one amplifier for all five. Also, the amplifiers feature the clock-syncing ability I mentioned earlier, and since they are from the same family, they would all have the same clock frequency and would play nice with each other.
 
-I decided on three TPA3116D2 chips for the woofers, as they can comfortably output 50W per channel, so driving 30W drivers would result in how heat generated. Then for the tweeters, I chose a pair of TPA3130D2 chips as they can output 15W per channel, so I won't risk destroying my tweeters when the frame first powers on. Texas Instruments also provides amazing application schematics for all of their audio amplifiers, so implementing that was relatively easy.
+I decided on three TPA3116D2 chips for the woofers, as they can comfortably output 50W per channel, so driving 30W drivers would result in low heat generated. Then for the tweeters, I chose a pair of TPA3130D2 chips as they can output 15W per channel, so I won't risk destroying my tweeters when the frame first powers on. Texas Instruments also provides amazing application schematics for all of their audio amplifiers, so implementing that was relatively easy.
+
+# Devlog 9: Assigning Footprints and Starting the PCB
+
+After the amplifier schematics were done, the main schematics of the design were pretty much finished save for a few quality of life improvements. These included four WS2812B NeoPixel lights connected to the ESP32 for state signalling, and a UART pin header for programming the thing in the first place. After that, I started to assign all the PCB footprints for all the 200 or so components I had amassed. That took quite a lot of time as I was using so many imported libraries from SnapEDA and Ultra Librarian for the more specialised ICs I was using in my design. Nevertheless, I finally got to the end of that tedious task, and promptly created a PCB outline in the PCB editor. I was pleasantly surprised by how much space I had to work with, and this was by FAR my largest PCB.
+
+# Devlog 10: Routed the HDMI and Pi Circuit
+
+With all the components I needed to place off to one side of the board, and with a black screen in front of me, I started to place the Raspberry Pi CM4's circuit components, including the HDMI and USB-C ports. I then routed the traces for those, making sure to impedance-match all the high-speed data lines to make sure my design fits within the HDMI and USB specifications. I then routed the main power jack that powers the whole board, making sure to place a TON of vias all around it since it will carry more than 200W of power at 24V (that's like 8 amps...).
+
+# Devlog 11: Routed the ESP32 and DAC Circuit
+
+I placed the ESP32-S3 module right next to the Raspberry Pi, and routed all of the components around its strapping pins and also its decoupling capacitors. I then started routing the all-important DAC circuitry with the PCM5102A chips and the analog audio switches. This is the most delicate part of the whole board, as it requires really weak analog signals flowing through it, which can easily be disrupted and corrupted by digital ANYTHING next to them.
+
+That's why I placed the most important part of this circuit, the ultra-low-noise power supply, on the other side of the board. Digital noise made by the HDMI signals would have to travel very far, so it will dissipate by the time it reaches the power supply. The PCM5102As were also placed far away from any digital signals, and a dense via fence was made to separate them. Via fences work just like regular fences, and since vias have holes drilled through them, they completely block any current from flowing through them, instead rerouting the current to flow around them. Placing vias close together diffracts any noise passing through them via the ground plane, which makes it much, MUCH less powerful.
+
+# Devlog 12: Routed the Audio Switcher Circuit and 1st Amplifier!
+
+I placed the audio switching circuit after the PCM5102As, and made sure to place them in such a manner where I would have to use the least number of vias I could possibly use. This is because audio signals HATE vias, as they are points of sudden change in resistance, causing EMI in some cases. I used a thicker 0.3mm trace width for each audio signal... uhh... because it felt right and I should trust my gut. 
+
+Moving on, I finally started work on the 1st amplifier circuit, which was destined for woofers 1 and 2. I had gravely underestimated the space I had available on the board, so I packed the circuit in as tightly as I possibly could. That meant a lot of rearranging components, and experimenting with... interesting layouts until I was finally happy with what I had created. I angled the actual amplifier IC by 45 degrees and placed it in its own little corner along with the largest components in any amplifier system: the inductors. I made sure to use ton of vias for power and grounding, and I think I made a very nice little circuit that can still pack a punch.
+
+# Devlog 13: Routed the 2nd Amplifier
+
+
+
