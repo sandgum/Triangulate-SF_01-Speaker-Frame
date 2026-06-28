@@ -74,7 +74,28 @@ After going through a DAC, the audio signals are routed through a custom analog 
 <img width="1282" height="882" alt="image" src="https://github.com/user-attachments/assets/045d2cf5-7e64-4bd4-9890-eaebdc6919cf" />
 
 ## PCB Layout
-*Coming soon*
+
+**Top Layer**
+
+<img width="861" height="875" alt="image" src="https://github.com/user-attachments/assets/e17862ed-20ec-48e4-8a94-da0f503d47aa" />
+
+**Inner Layer 1 (GND Plane)**
+
+<img width="863" height="874" alt="image" src="https://github.com/user-attachments/assets/98790b68-4020-4938-a085-4953629ab812" />
+
+**Inner Layer 2**
+
+<img width="861" height="873" alt="image" src="https://github.com/user-attachments/assets/d0946664-fb87-4927-9d56-51dfb6d19a80" />
+
+**Bottom Layer**
+
+<img width="863" height="874" alt="image" src="https://github.com/user-attachments/assets/84ba6ff9-edc8-4309-8c21-b397a868e178" />
+
+**3D Model**
+
+<img width="1095" height="970" alt="image" src="https://github.com/user-attachments/assets/0bca1d1f-0021-4333-89ff-2c280dfc69cd" />
+<img width="941" height="876" alt="image" src="https://github.com/user-attachments/assets/997649e2-7f81-4d21-bf98-7dd0480ce3e5" />
+
 
 ## Bill Of Materials
 *Coming soon*
