@@ -1,5 +1,7 @@
 # Triangulate-SF_01-Speaker-Frame
 
+*AI Use: No AI was used to generate any journal entries or README text at all. AI was only used for minor electronics help and parsing some really long chip datasheets*
+
 ## Description
 The SF_01 is a 24-inch digital picture frame running Android on a Raspberry Pi CM4. The Pi pushes an image to an off-the-shelf IPS monitor from LG through HDMI, and has wireless and USB peripheral support for touch displays, keyboards, and other HIDs.
 
