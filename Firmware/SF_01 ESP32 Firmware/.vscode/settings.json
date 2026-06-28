@@ -2,17 +2,17 @@
   "C_Cpp.intelliSenseEngine": "default",
   "idf.extensionActivationMode": "always",
   "idf.openOcdConfigs": [
-    "board/esp32s3-builtin.cfg"
+    "board/esp32-wrover-kit-3.3v.cfg"
   ],
   "idf.port": "detect",
   "idf.currentSetup": "/Users/sanyamsaharan/.espressif/v6.0.1/esp-idf",
   "idf.customExtraVars": {
-    "IDF_TARGET": "esp32s3"
+    "IDF_TARGET": "esp32"
   },
   "clangd.path": "/Users/sanyamsaharan/.espressif/tools/esp-clang/esp-20.1.1_20250829/esp-clang/bin/clangd",
   "clangd.arguments": [
     "--background-index",
     "--query-driver=**",
-    "--compile-commands-dir=/Users/sanyamsaharan/Desktop/Untitled/Triangulate-SF_01-Speaker-Frame/Firmware/SF_01 Firmware/build"
+    "--compile-commands-dir=/Users/sanyamsaharan/Desktop/Untitled/Triangulate-SF_01-Speaker-Frame/Firmware/SF_01 ESP32 Firmware/build"
   ]
 }
