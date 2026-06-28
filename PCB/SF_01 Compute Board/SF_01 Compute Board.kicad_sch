@@ -13505,7 +13505,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_Push_2P2T_Toggle_CK_PVA2xxH1xxxxxxV2"
+		(property "Footprint" "Button_Switch_SMD:SW_DPDT_CK_JS202011JCQN"
 			(at 278.13 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -21200,7 +21200,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_Push_2P2T_Toggle_CK_PVA2xxH1xxxxxxV2"
+		(property "Footprint" "Button_Switch_SMD:SW_DPDT_CK_JS202011JCQN"
 			(at 228.6 19.05 0)
 			(hide yes)
 			(show_name no)

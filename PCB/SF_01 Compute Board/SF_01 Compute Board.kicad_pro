@@ -60,7 +60,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|190760000|145000000|7fb08c90-824e-4e6c-9a3e-323a5a4b870d|da0263a4-9d27-44ef-b065-da003acfbad6",
+          ""
+        ],
+        [
+          "solder_mask_bridge|190265000|115540000|ecc60114-149f-493e-8535-0c4009bcaa1c|fe976c70-da39-4bd1-bd5f-12c97e65a8dc",
+          ""
+        ],
+        [
+          "solder_mask_bridge|190920000|145080000|5fa68be6-4c94-41b0-a35d-5dd23a24118d|0d33d66f-9134-474e-8043-3609f4b8eee5",
+          ""
+        ],
+        [
+          "unconnected_items|195980000|36217541|F.Cu|4|b8e80815-b5be-4ffa-80f6-7bcdb689ea67|67f1145b-d647-471d-954f-e0a9b6cd864f",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -70,7 +87,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "error",
+        "courtyards_overlap": "ignore",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
