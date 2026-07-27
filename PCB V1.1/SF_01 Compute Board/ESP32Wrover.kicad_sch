@@ -2346,13 +2346,13 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 83.82) (xy 74.93 83.82)
+			(xy 43.18 83.82) (xy 74.93 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "49e26a5f-e410-45cc-982e-9b3c377268f4")
+		(uuid "47f09efd-2150-4795-bd8f-eeecaddca39c")
 	)
 	(wire
 		(pts
@@ -2383,6 +2383,16 @@
 			(type default)
 		)
 		(uuid "53c36fe6-ec8f-4482-9ad9-1693683d573e")
+	)
+	(wire
+		(pts
+			(xy 38.1 91.44) (xy 38.1 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53f0343a-0760-43ae-bcc2-859fbf314410")
 	)
 	(wire
 		(pts
@@ -2606,7 +2616,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 93.98) (xy 74.93 93.98)
+			(xy 38.1 93.98) (xy 74.93 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2908,7 +2918,7 @@
 	)
 	(global_label "TWEETER_MUTE"
 		(shape input)
-		(at 60.96 83.82 180)
+		(at 38.1 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2918,7 +2928,7 @@
 		)
 		(uuid "6c63647e-b41b-4f0b-9493-c63074829fa5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.0051 83.82 0)
+			(at 21.1451 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2932,7 +2942,7 @@
 	)
 	(global_label "WOOFER_MUTE"
 		(shape input)
-		(at 59.69 93.98 180)
+		(at 38.1 93.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2942,7 +2952,7 @@
 		)
 		(uuid "71dbd2ee-b408-44ad-b4bc-b83f9a7fa11b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.2187 93.98 0)
+			(at 21.6287 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2975,6 +2985,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "ORIENTATION_SWITCH"
+		(shape input)
+		(at 43.18 83.82 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a9b8adc0-4cd9-4325-bc14-f48453008444")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 20.419 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
