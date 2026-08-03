@@ -2069,12 +2069,6 @@
 		(uuid "46b2c7b8-ccad-4955-9756-8c59db1df7da")
 	)
 	(junction
-		(at 74.93 173.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "490562ef-fbd7-41ce-9784-025d4bbed968")
-	)
-	(junction
 		(at 148.59 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2397,12 +2391,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e86bd70e-1c56-4485-847a-5468b81f1a9d")
-	)
-	(junction
-		(at 127 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ea89d4df-7259-4297-8f83-ed3bfad2264a")
 	)
 	(junction
 		(at 99.06 20.32)
@@ -3684,7 +3672,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 173.99) (xy 74.93 173.99)
+			(xy 64.77 173.99) (xy 77.47 173.99)
 		)
 		(stroke
 			(width 0)
@@ -3864,7 +3852,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 83.82) (xy 127 83.82)
+			(xy 116.84 83.82) (xy 129.54 83.82)
 		)
 		(stroke
 			(width 0)
@@ -4404,16 +4392,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 173.99) (xy 77.47 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0bb9b34-3f2b-407d-9db8-95ad5580e2ba")
-	)
-	(wire
-		(pts
 			(xy 154.94 167.64) (xy 154.94 170.18)
 		)
 		(stroke
@@ -4921,16 +4899,6 @@
 			(type default)
 		)
 		(uuid "f5614e2d-0560-4c7b-8d29-bda1c2ea8819")
-	)
-	(wire
-		(pts
-			(xy 127 83.82) (xy 129.54 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5751904-c98b-4673-ac58-a58bedfca033")
 	)
 	(wire
 		(pts
@@ -7403,84 +7371,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 74.93 181.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4556ec22-853d-4a6e-b0f2-83cce645749c")
-		(property "Reference" "#PWR0126"
-			(at 74.93 187.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 74.93 186.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 74.93 181.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 181.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 74.93 181.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7249c5b4-a24e-4ab2-a2a9-9cbd11d3c859")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "#PWR0126")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 38.1 138.43 0)
 		(unit 1)
 		(body_style 1)
@@ -8922,7 +8812,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "100R"
 			(at 67.31 179.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9377,87 +9267,6 @@
 			(project "SF_01 Compute Board"
 				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
 					(reference "C153")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 127 87.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6f350247-f703-4d42-a72f-139aa72a7b4f")
-		(property "Reference" "C140"
-			(at 125.476 79.502 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 125.476 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 127.9652 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 127 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "11849ba2-fe93-49ca-b893-b29e21c2f864")
-		)
-		(pin "2"
-			(uuid "b711add5-ed46-44fb-9ed6-542576209dc0")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "C140")
 					(unit 1)
 				)
 			)
@@ -11683,87 +11492,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 74.93 177.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "af012a5d-9269-4c80-96a2-7ca891970da4")
-		(property "Reference" "C168"
-			(at 73.406 169.672 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 73.406 172.212 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 75.8952 181.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 74.93 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4735975a-844f-4ab9-92e6-7f166d7d91de")
-		)
-		(pin "2"
-			(uuid "58045b75-344c-4df3-868e-3eaf3120e25d")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "C168")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 118.11 191.77 0)
 		(unit 1)
@@ -12587,7 +12315,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "100R"
 			(at 119.38 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14420,84 +14148,6 @@
 			(project "SF_01 Compute Board"
 				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
 					(reference "C164")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 127 91.44 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ff3915ed-0073-4d34-8e79-d941aec48161")
-		(property "Reference" "#PWR0114"
-			(at 127 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 127 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 127 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8895cf15-4bfb-4c3d-8c0e-ff24a9c8def2")
-		)
-		(instances
-			(project "SF_01 Compute Board"
-				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/c1200ee8-f992-49b3-9b62-9206b4f107d1"
-					(reference "#PWR0114")
 					(unit 1)
 				)
 			)

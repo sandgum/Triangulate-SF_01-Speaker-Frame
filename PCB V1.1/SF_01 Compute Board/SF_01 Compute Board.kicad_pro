@@ -60,12 +60,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "clearance|190760000|145000000|7fb08c90-824e-4e6c-9a3e-323a5a4b870d|da0263a4-9d27-44ef-b065-da003acfbad6",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -682,7 +677,7 @@
         "uuid": "92cc60e0-eea7-49a8-8acb-7ee37df4a56f"
       }
     ],
-    "used_designators": "#PWR160,R30,R39,R50,R60,R76,C40-41",
+    "used_designators": "D1",
     "variants": []
   },
   "sheets": [
