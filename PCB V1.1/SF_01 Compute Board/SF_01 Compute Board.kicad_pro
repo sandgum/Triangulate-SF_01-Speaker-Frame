@@ -213,7 +213,9 @@
         2.0,
         3.0,
         3.5,
-        4.0
+        4.0,
+        5.0,
+        6.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -680,7 +682,7 @@
         "uuid": "92cc60e0-eea7-49a8-8acb-7ee37df4a56f"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR160,R30,R39,R50,R60,R76,C40-41",
     "variants": []
   },
   "sheets": [
@@ -707,6 +709,10 @@
     [
       "fc7a1421-7059-4860-9c87-4baf2669ef26",
       "ESP32 WROVER"
+    ],
+    [
+      "dd5398a5-79a2-4d07-a853-30fb32f04272",
+      "Power Rails"
     ]
   ],
   "text_variables": {},

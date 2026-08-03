@@ -1369,6 +1369,12 @@
 		(uuid "8be9235f-9974-40ce-9631-4f8c663de77d")
 	)
 	(junction
+		(at 81.28 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6983378-6d47-4725-ba20-73a8e4e369af")
+	)
+	(junction
 		(at 72.39 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1580,6 +1586,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 83.82) (xy 81.28 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c1881e2-3c59-4e25-b5b5-69cdd7ead536")
+	)
+	(wire
+		(pts
 			(xy 58.42 53.34) (xy 72.39 53.34)
 		)
 		(stroke
@@ -1597,6 +1613,16 @@
 			(type default)
 		)
 		(uuid "6e2a2aa0-c0b1-465f-bcab-2f36b165b4fa")
+	)
+	(wire
+		(pts
+			(xy 81.28 76.2) (xy 81.28 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77b03672-1434-4d44-aaa4-c64b6f922a25")
 	)
 	(wire
 		(pts
@@ -1627,6 +1653,16 @@
 			(type default)
 		)
 		(uuid "814ae963-15cd-4edd-84be-7cd132f68c1c")
+	)
+	(wire
+		(pts
+			(xy 81.28 73.66) (xy 81.28 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b395010-a622-4327-8f4d-4debfa6fa0db")
 	)
 	(wire
 		(pts
@@ -1751,30 +1787,6 @@
 		(uuid "187120a4-6b3f-4f1b-9648-82749cccd649")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 222.4533 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "MPU_INT"
-		(shape input)
-		(at 116.84 60.96 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1a22dcb5-d763-41fa-a2c9-1398ef6f45cb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.7476 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2098,6 +2110,84 @@
 			(project "SF_01 Compute Board"
 				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/95b1ac50-bbb8-45c1-8b21-0ebbe41ac83d"
 					(reference "C186")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 78.74 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d0d748c-6f6e-41f1-9cc2-1866e6095605")
+		(property "Reference" "#PWR0160"
+			(at 78.74 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 78.74 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 78.74 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1f050307-cf44-48d8-ac34-00aee3a3fdd6")
+		)
+		(instances
+			(project "SF_01 Compute Board"
+				(path "/92cc60e0-eea7-49a8-8acb-7ee37df4a56f/95b1ac50-bbb8-45c1-8b21-0ebbe41ac83d"
+					(reference "#PWR0160")
 					(unit 1)
 				)
 			)

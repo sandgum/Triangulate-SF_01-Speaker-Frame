@@ -2266,7 +2266,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 86.36) (xy 74.93 86.36)
+			(xy 59.69 86.36) (xy 74.93 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2346,7 +2346,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 83.82) (xy 74.93 83.82)
+			(xy 59.69 83.82) (xy 74.93 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2383,16 +2383,6 @@
 			(type default)
 		)
 		(uuid "53c36fe6-ec8f-4482-9ad9-1693683d573e")
-	)
-	(wire
-		(pts
-			(xy 38.1 91.44) (xy 38.1 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53f0343a-0760-43ae-bcc2-859fbf314410")
 	)
 	(wire
 		(pts
@@ -2446,7 +2436,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 96.52) (xy 74.93 96.52)
+			(xy 59.69 96.52) (xy 74.93 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2616,7 +2606,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 93.98) (xy 74.93 93.98)
+			(xy 59.69 93.98) (xy 74.93 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2686,7 +2676,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 119.38) (xy 138.43 119.38)
+			(xy 120.65 119.38) (xy 129.54 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2750,7 +2740,7 @@
 	)
 	(global_label "TWT_DIN"
 		(shape input)
-		(at 57.15 96.52 180)
+		(at 59.69 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2760,7 +2750,7 @@
 		)
 		(uuid "07e37999-06dd-4285-8a93-2707f4398abc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.6053 96.52 0)
+			(at 49.1453 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2846,7 +2836,7 @@
 	)
 	(global_label "NEOPIXEL_DIN"
 		(shape input)
-		(at 60.96 86.36 180)
+		(at 59.69 86.36 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2856,7 +2846,7 @@
 		)
 		(uuid "41438b11-418c-42d4-a425-971dfb119ff9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.7305 86.36 0)
+			(at 43.4605 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2894,7 +2884,7 @@
 	)
 	(global_label "DAC_EN"
 		(shape input)
-		(at 138.43 119.38 0)
+		(at 129.54 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2904,7 +2894,7 @@
 		)
 		(uuid "54a409fe-892b-4e35-9c64-22fda87683bf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.4909 119.38 0)
+			(at 139.6009 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2916,9 +2906,9 @@
 			)
 		)
 	)
-	(global_label "TWEETER_MUTE"
+	(global_label "DRIVER_MUTE"
 		(shape input)
-		(at 38.1 91.44 180)
+		(at 59.69 93.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2926,33 +2916,9 @@
 			)
 			(justify right)
 		)
-		(uuid "6c63647e-b41b-4f0b-9493-c63074829fa5")
+		(uuid "6a3be434-6efe-49d7-938b-a5c6eb2d260e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.1451 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "WOOFER_MUTE"
-		(shape input)
-		(at 38.1 93.98 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "71dbd2ee-b408-44ad-b4bc-b83f9a7fa11b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.6287 93.98 0)
+			(at 44.1863 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2990,7 +2956,7 @@
 	)
 	(global_label "ORIENTATION_SWITCH"
 		(shape input)
-		(at 43.18 83.82 180)
+		(at 59.69 83.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3000,7 +2966,7 @@
 		)
 		(uuid "a9b8adc0-4cd9-4325-bc14-f48453008444")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 20.419 83.82 0)
+			(at 36.929 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
