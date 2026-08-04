@@ -61,46 +61,70 @@ After going through a DAC, the audio signals are routed through a custom analog 
 ## PCB Schematics
 
 **Raspberry Pi Circuit**
-<img width="1392" height="957" alt="image" src="https://github.com/user-attachments/assets/4e6586a7-b9e4-4d58-a416-6197ec918669" />
+
+<img width="1292" height="890" alt="image" src="https://github.com/user-attachments/assets/eeb535a9-7fc0-44c3-b733-ed6fc758e378" />
+
 
 **DAC and Analog Multiplexer Circuit**
-<img width="1357" height="931" alt="image" src="https://github.com/user-attachments/assets/e05115d2-ed6b-49c4-a719-acbef690f496" />
+
+<img width="1296" height="891" alt="image" src="https://github.com/user-attachments/assets/aa34bc56-6bd7-462a-9fb6-6a11734fb8d1" />
+
 
 **ESP32 WROVER E Circuit**
-<img width="1283" height="882" alt="image" src="https://github.com/user-attachments/assets/e32255ee-b3b8-48e8-a572-b41222ff93d8" />
+
+<img width="1293" height="889" alt="image" src="https://github.com/user-attachments/assets/d22475ee-5648-4cf5-9f6b-f99f37f399b9" />
+
 
 **Subwoofer Amplifiers**
-<img width="1365" height="938" alt="image" src="https://github.com/user-attachments/assets/40cbeb7e-c0ed-413e-9cf4-61133022d3c8" />
+
+<img width="1292" height="887" alt="image" src="https://github.com/user-attachments/assets/b1649398-994f-46ee-9a5f-5992a8ac4938" />
+
 
 **Tweeter Amplifiers**
-<img width="1311" height="902" alt="image" src="https://github.com/user-attachments/assets/c3568b26-137d-4eb5-a159-f3c34045f032" />
+
+<img width="1292" height="889" alt="image" src="https://github.com/user-attachments/assets/e087710a-4417-49f6-9dd1-b133999edc0a" />
+
 
 **Environmental and Orientation Sensors**
-<img width="1282" height="882" alt="image" src="https://github.com/user-attachments/assets/045d2cf5-7e64-4bd4-9890-eaebdc6919cf" />
+
+<img width="1292" height="889" alt="image" src="https://github.com/user-attachments/assets/e14a7a73-9433-4164-a90a-611f6f2925ad" />
+
+**Power Circuitry**
+
+<img width="1295" height="887" alt="image" src="https://github.com/user-attachments/assets/a3cb31b8-37ba-4196-929a-0a12a4f34ea5" />
+
+
 
 ## PCB Layout
 
 **Top Layer**
 
-<img width="908" height="927" alt="image" src="https://github.com/user-attachments/assets/e3b37884-7fcc-41e7-af7b-bc0f2b765942" />
+<img width="940" height="955" alt="image" src="https://github.com/user-attachments/assets/9f1931e9-d1a4-4741-917e-42fca7e2b5d6" />
+
 
 **Inner Layer 1 (GND Plane)**
 
-<img width="915" height="926" alt="image" src="https://github.com/user-attachments/assets/474cf403-76ba-4cf7-9a2d-6c7099cceecf" />
+<img width="934" height="956" alt="image" src="https://github.com/user-attachments/assets/ccf0d40b-5bc5-47df-995b-38f2ba099dbf" />
+
 
 **Inner Layer 2**
 
-<img width="911" height="925" alt="image" src="https://github.com/user-attachments/assets/62ca37e4-bd6b-466e-a23b-0c6188ee2246" />
+<img width="930" height="952" alt="image" src="https://github.com/user-attachments/assets/0256759b-2b11-46ce-b2ee-0fe89f66f1b4" />
+
 
 **Bottom Layer**
 
-<img width="912" height="925" alt="image" src="https://github.com/user-attachments/assets/83138e29-fd7b-44f4-b36e-6536562548ec" />
+<img width="931" height="952" alt="image" src="https://github.com/user-attachments/assets/1070fa23-319b-423e-8027-019df26495dd" />
+
 
 **3D Model**
 
-<img width="869" height="947" alt="image" src="https://github.com/user-attachments/assets/33ebc589-4067-4d1e-99b0-52d9e8d46e8b" />
-<img width="935" height="984" alt="image" src="https://github.com/user-attachments/assets/038b8b9a-c50b-41e3-82f6-1065b8220d1d" />
-<img width="769" height="933" alt="image" src="https://github.com/user-attachments/assets/10bf3d57-32da-43fd-b0f4-873b48c9d47c" />
+<img width="1007" height="899" alt="image" src="https://github.com/user-attachments/assets/6ec79e9c-0179-4767-9893-c2a0e2132698" />
+
+<img width="877" height="940" alt="image" src="https://github.com/user-attachments/assets/ed8b4db7-03dc-4408-ac84-b82dd87cbe03" />
+
+<img width="835" height="897" alt="image" src="https://github.com/user-attachments/assets/24bedc9b-3685-4c5f-b0e3-7fb6877c32f6" />
+
 
 ## Bill Of Materials
 
