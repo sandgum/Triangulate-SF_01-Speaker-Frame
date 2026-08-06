@@ -164,17 +164,17 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 | R7, R17 | 2 | 56K | 0603WAF5602T5E | UNI-ROYAL | 0603 | 56kOhm ±1% 100mW 0603 | 0.0081 | 0.02 | [C23206](https://www.lcsc.com/product-detail/C23206.html) |
 | Q1 | 1 | BSS138 | BSS138 | Shikues | SOT-23 | N-channel logic-level MOSFET 50V 0.2A | 0.0191 | 0.02 | [C112239](https://www.lcsc.com/product-detail/C112239.html) |
 | R19 | 1 | 20K | FRC0603F2002TS | FOJAN | 0603 | 20kOhm ±1% 100mW 0603 | 0.0020 | 0.00 | [C2907011](https://www.lcsc.com/product-detail/C2907011.html) |
-| R8, R9, R10, R11 | 4 | 470R | 0603WAF4700T5E | UNI-ROYAL | 0603 | 470Ohm ±1% 100mW 0603 | 0.0010 | 0.00 | [C23179](https://www.lcsc.com/product-detail/C23179.html) |
+| R8, R9, R10, R11 | 4 | 470R | FRC0603F4700TS | FOJAN | 0603 | 470Ohm ±1% 100mW 0603 | 0.0027 | 0.01 | [C2907041](https://www.lcsc.com/product-detail/C2907041.html) |
 | R14, R78 | 2 | 220R | 0603WAF2200T5E | UNI-ROYAL | 0603 | 220Ohm ±1% 100mW 0603 | 0.0010 | 0.00 | [C22962](https://www.lcsc.com/product-detail/C22962.html) |
 | R66 | 1 | 205K | FRC0603F2053TS | FOJAN | 0603 | 205kOhm ±1% 100mW 0603 | 0.0008 | 0.00 | [C5126104](https://www.lcsc.com/product-detail/C5126104.html) |
 | R75 | 1 | 60.4K | 0603WAF6042T5E | UNI-ROYAL | 0603 | 60.4kOhm ±1% 100mW 0603 | 0.0009 | 0.00 | [C23089](https://www.lcsc.com/product-detail/C23089.html) |
 | R74 | 1 | 11.5K | FRC0603F1152TS | FOJAN | 0603 | 11.5kOhm ±1% 100mW 0603 | 0.0009 | 0.00 | [C2930057](https://www.lcsc.com/product-detail/C2930057.html) |
-| R13 | 1 | 10.7K | 0603WAF1072T5E | UNI-ROYAL | 0603 | 10.7kOhm ±1% 100mW 0603 | 0.0010 | 0.00 | [C22857](https://www.lcsc.com/product-detail/C22857.html) |
+| R13 | 1 | 10.7K | FRC0603F1072TS | FOJAN | 0603 | 10.7kOhm ±1% 100mW 0603 | 0.0025 | 0.00 | [C5153968](https://www.lcsc.com/product-detail/C5153968.html) |
 | L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12 | 12 | 10uH/10A | SMDRH104R-100MT | cjiang | SMD,10.4x10.3mm | 10uH ±20% 3.8A rated / 5.6A sat / 35mOhm | 0.1916 | 2.30 | [C9935](https://www.lcsc.com/product-detail/C9935.html) |
 | L13, L14, L15, L16, L17, L18, L19, L20 | 8 | 10uH/3A | FHD4020S-100MT | cjiang | SMD,4x4mm | 10uH ±20% 2.35A rated / 3.5A sat / 190mOhm | 0.1102 | 0.88 | [C602032](https://www.lcsc.com/product-detail/C602032.html) |
-| L21 | 1 | 6.8uH/5A | MWSA0603S-6R8MT | Sunlord | SMD,7x6.6mm | 6.8uH ±20% 5.0A rated / 6.0A sat / 48mOhm molded | 0.1007 | 0.10 | [C408449](https://www.lcsc.com/product-detail/C408449.html) |
+| L21 | 1 | 6.8uH/6.6A | AAPS0650M6R8F | Coilank | SMD,6.6x6.4mm | 6.8uH ±20% 6.6A rated / 7A sat / 25.4mOhm molded | 0.9665 | 0.97 | [C49261484](https://www.lcsc.com/product-detail/C49261484.html) |
 | U4 | 1 | TPS54540DDAR | TPS54540DDAR | Texas Instruments | SOIC-8-EP | 42V 5A step-down converter | 1.4638 | 1.46 | [C95286](https://www.lcsc.com/product-detail/C95286.html) |
-| CR2 | 1 | STPS30M60DJF-TR | STPS30M60DJF-TR | ST | PowerFLAT(5x6) | 60V 30A Schottky | 1.2169 | 1.22 | [C154533](https://www.lcsc.com/product-detail/C154533.html) |
+| CR2 | 1 | STPS30H100DJF-TR | STPS30H100DJF-TR | ST | PowerFLAT5x6-8 | 100V 30A Schottky | 1.3985 | 1.40 | [C2969851](https://www.lcsc.com/product-detail/C2969851.html) |
 | U10 | 1 | LP5907MFX-4.5 | LP5907MFX-4.5/NOPB | Texas Instruments | SOT-23-5 | 4.5V LDO | 0.5581 | 0.56 | [C529554](https://www.lcsc.com/product-detail/C529554.html) |
 | U11 | 1 | LP5907MFX-3.3 | LP5907MFX-3.3 | Texas Instruments | SOT-23-5 | 3.3V LDO | 0.1343 | 0.13 | [C23380874](https://www.lcsc.com/product-detail/C23380874.html) |
 | U17, U18, U19 | 3 | TPA3116D2DAD | TPA3116D2DADR | Texas Instruments | HTSSOP-32-6.1mm | 2x50W@4ohm Class D amplifier | 1.0619 | 3.19 | [C50144](https://www.lcsc.com/product-detail/C50144.html) |
@@ -198,12 +198,12 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 | J15 | 1 | USB_C_Receptacle_USB2.0_16P | TYPE-C 16PIN 2MD(073) | SHOU HAN | SMD | USB-C receptacle 16P | 0.0707 | 0.07 | [C2765186](https://www.lcsc.com/product-detail/C2765186.html) |
 | J2 | 1 | Barrel_Jack | RAPC10U | Switchcraft | - | Power barrel jack 1.93/5.75mm | 17.0122 | 17.01 | [C3095802](https://www.lcsc.com/product-detail/C3095802.html) |
 | J3 | 1 | UART | PZ254V-11-04P | XFCN | TH P=2.54mm | 4-position 2.54mm header | 0.0254 | 0.03 | [C2691448](https://www.lcsc.com/product-detail/C2691448.html) |
-| SW1 | 1 | POWER | KSC921JLFS | C&K | SMD,6.2x6.2mm | Tactile switch SPST | 0.7270 | 0.73 | [C221767](https://www.lcsc.com/product-detail/C221767.html) |
+| SW1 | 1 | POWER | KSC931JLFS | C&K | SMD-4P,6.2x6.2mm | Tactile switch SPST IP67 J-lead | 2.0503 | 2.05 | [C221769](https://www.lcsc.com/product-detail/C221769.html) |
 | SW2, SW3, SW4 | 3 | Tactile | KMR211GLFS | C&K | SMD | Tactile switch SPST-NO | 0.6377 | 1.91 | [C221675](https://www.lcsc.com/product-detail/C221675.html) |
-| SW6 | 1 | SW_DPDT_x2 | JS202011JCQN | C&K | SMD | Slide switch DPDT 300mA@6V | 1.0884 | 1.09 | [C221665](https://www.lcsc.com/product-detail/C221665.html) |
+| SW6 | 1 | SW_DPDT_x2 | JS202011JAQN | C&K | SMD | Slide switch DPDT 300mA@6V, right-angle | 1.2032 | 1.20 | [C221664](https://www.lcsc.com/product-detail/C221664.html) |
 | U1 | 1 | CM4102008 | CM4102008 | Raspberry Pi | - | Compute Module 4 | 124.9100 | 124.91 | — |
 
-**Board subtotal: $195.14 per board**
+**Board subtotal: $197.63 per board**
 
 ### Off-Board / Mechanical
 
@@ -221,7 +221,8 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 |---|---|---|
 | C100, C101, C129 | CHANGED + FOOTPRINT | Was 10uF/25V 0603 on the 24V rail. 10uF/50V does not exist in 0603 - the footprint has to go to 1210 |
 | C191, C192 | CHANGED + FOOTPRINT | TPS54540 output bulk. 47uF does not exist in 0603 or 0805 at >=16V - footprint has to go to 1210 |
-| L21 | CHANGED - NO PCB CHANGE | Was VLS6045EX-6R8M (C415364), 3.6A rated / 4.7A sat. Ripple is 1.23A p-p, so peak hits 4.72A at a 4.1A load - it saturated with zero margin. Now MWSA0603S-6R8MT, 5.0A rated / 6.0A sat. The 7x6.6mm body fits inside the existing 7.50x6.80mm courtyard (R13 is 4.38mm clear), so the land pattern is unchanged. Alternates: [C5349706](https://www.lcsc.com/product-detail/C5349706.html) APH0630T6R8M or [C167221](https://www.lcsc.com/product-detail/C167221.html) FXL0630-6R8-M |
+| L21 | CHANGED - NO PCB CHANGE | Now AAPS0650M6R8F (Coilank), 6.6A rated / 7A sat / 25.4mOhm. Replaced VLS6045EX-6R8M which saturated at full load (4.7A sat vs a 4.72A peak). 48% saturation margin now, and half the DCR. Body 6.6x6.4mm fits the existing 7.50x6.80mm courtyard so the land pattern is unchanged |
+| CR2, R8-R11, R13, SW1, SW6 | CHANGED - RESTOCK | All five originals hit 0 stock on LCSC. CR2 -> STPS30H100DJF-TR (C2969851, same PowerFLAT 5x6 family, 100V, lowest Vf of the in-stock options). R8-R11 -> FRC0603F4700TS (C2907041). R13 -> FRC0603F1072TS (C5153968, only 1k in stock; plain 10K works as a fallback). SW1 -> KSC931JLFS (C221769, only 18 in stock). SW6 -> JS202011JAQN (C221664) which is RIGHT-ANGLE where the original was VERTICAL, so verify the land pattern |
 | U8 | DELETED | U8 buffered CM4 RUN_PG into the GLOBAL_EN button, forming a feedback loop that repeatedly power-cycled the module. Removed. SW1 now goes straight to GPIO3/GND as a soft power button (`dtoverlay=gpio-shutdown`), with R77 as pull-up and C74 as debounce |
 | U9 | CHANGED - FOOTPRINT | Footprint is SOT-23-5, same as U10/U11/U27; symbol pin numbering unchanged (1=NC 2=A 3=GND 4=Y 5=VCC). MUST stay LVC. Budget alt C7394020 (UMW) |
 | R77, R78, C74, TP1, TP2 | NEW | Power-button circuit. R77 10K pulls GPIO3 to 3V3, C74 100nF debounces it, R78 220R feeds TP1 for CM4 reset (220R is the value the CM4 datasheet specifies), TP2 exposes GLOBAL_EN for a hard force-off |
@@ -231,4 +232,4 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 | J2 | KEEP - VERIFY RATING | Confirm its current rating against the ~8A this board can draw at full output |
 | U1 | NOT ON LCSC | Source from an approved Raspberry Pi reseller. Schematic says CM4102008 but the old BOM said CM4102016 - pick one |
 
-## Total: $432.00 USD per complete unit
+## Total: $434.49 USD per complete unit
