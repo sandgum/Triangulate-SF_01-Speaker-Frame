@@ -1,7 +1,7 @@
 {
   "version": 1,
   "project": "SF_01 Compute Board.kicad_pro",
-  "current": "2026-08-02_2051",
+  "current": "2026-08-05_1838",
   "runs": {
     "2026-08-02_2051": {
       "source_hashes": {
@@ -22,6 +22,44 @@
         "schematic": "analyze_schematic.py SF_01 Compute Board.kicad_sch"
       },
       "generated": "2026-08-03T21:38:09+10:00",
+      "pinned": false
+    },
+    "2026-08-05_1832": {
+      "source_hashes": {
+        "SF_01 Compute Board.kicad_sch": "sha256:6926419438ae8105ef03f6317024148fc8b6dcfd0e5dc9def4cbefe8d1a52260",
+        "SF_01 Compute Board.kicad_pcb": "sha256:a40e6775cc72af5a1cb50c7039b417bb86cff67a8cee817cad96d477b7d7e06c"
+      },
+      "outputs": {
+        "schematic": "schematic.json",
+        "pcb": "pcb.json",
+        "cross_analysis": "cross_analysis.json",
+        "emc": "emc.json",
+        "thermal": "thermal.json",
+        "gerber": "gerber.json"
+      },
+      "scripts": {
+        "schematic": "analyze_schematic.py SF_01 Compute Board.kicad_sch"
+      },
+      "generated": "2026-08-05T18:38:36+10:00",
+      "pinned": false
+    },
+    "2026-08-05_1838": {
+      "source_hashes": {
+        "schematic.json": "sha256:ee892c270a249234a91fa6d7fea0a72c5bd50555516ea049db2ffe92d2c8fd90",
+        "pcb.json": "sha256:878940d8bb5cb00bb1007614f4a27f8f362004be9f1a4a9d6d447ac96967de80"
+      },
+      "outputs": {
+        "schematic": "schematic.json",
+        "pcb": "pcb.json",
+        "cross_analysis": "cross_analysis.json",
+        "emc": "emc.json",
+        "thermal": "thermal.json",
+        "gerber": "gerber.json"
+      },
+      "scripts": {
+        "emc": "analyze_emc.py"
+      },
+      "generated": "2026-08-05T18:38:37+10:00",
       "pinned": false
     }
   }

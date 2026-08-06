@@ -7049,7 +7049,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/25V"
+		(property "Value" "10uF/50V"
 			(at 102.362 49.276 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8626,7 +8626,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/25V"
+		(property "Value" "10uF/50V"
 			(at 89.916 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8943,7 +8943,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/25V"
+		(property "Value" "10uF/50V"
 			(at 113.03 49.022 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -134,7 +134,7 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 
 | Designators | Qty | Value | Part Number | Manufacturer | Package | Description | Unit (USD) | Ext. (USD) | LCSC |
 |---|---|---|---|---|---|---|---|---|---|
-| C1, C4, C5, C7, C9, C14, C17, C19, C23, C26, C28, C31, C34, C37, C38, C39, C42, C43, C45, C47, C50, C53, C72, C80, C81, C106, C109, C135, C138, C163, C166, C185, C186, C189 | 34 | 100nF | CL10B104KB8NNNC | Samsung Electro-Mechanics | 0603 | 100nF ±10% 50V X7R 0603 | 0.0142 | 0.48 | [C1591](https://www.lcsc.com/product-detail/C1591.html) |
+| C1, C4, C5, C7, C9, C14, C17, C19, C23, C26, C28, C31, C34, C37, C38, C39, C42, C43, C45, C47, C50, C53, C72, C74, C80, C81, C106, C109, C135, C138, C163, C166, C185, C186, C189 | 35 | 100nF | CL10B104KB8NNNC | Samsung Electro-Mechanics | 0603 | 100nF ±10% 50V X7R 0603 | 0.0142 | 0.50 | [C1591](https://www.lcsc.com/product-detail/C1591.html) |
 | C49, C52, C61, C62, C67, C68, C79, C82, C92, C93, C94, C95, C107, C108, C119, C120, C121, C122, C136, C137, C149, C150, C151, C152, C164, C165, C177, C178, C179, C180 | 30 | 1nF | CL10C102JB8NNNC | Samsung Electro-Mechanics | 0603 | 1nF ±5% 50V C0G 0603 | 0.0076 | 0.23 | [C163508](https://www.lcsc.com/product-detail/C163508.html) |
 | C2, C8, C12, C13, C40, C41, C44, C46, C48, C75, C76, C77, C102, C103, C105, C131, C132, C134, C157, C158, C159, C160, C162, C188, C190 | 25 | 1uF | CL10B105KA8NNNC | Samsung Electro-Mechanics | 0603 | 1uF ±10% 25V X7R 0603 | 0.0218 | 0.55 | [C29936](https://www.lcsc.com/product-detail/C29936.html) |
 | C24, C63, C64, C69, C70, C96, C97, C98, C99, C123, C124, C125, C126, C153, C154, C155, C156, C181, C182, C183, C184 | 21 | 10nF | GRM1885C1H103JA01D | muRata | 0603 | 10nF ±5% 50V C0G 0603 | 0.0547 | 1.15 | [C85973](https://www.lcsc.com/product-detail/C85973.html) |
@@ -152,7 +152,7 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 | C15, C16, C18, C22, C25, C27, C32, C33 | 8 | 10uF | EEEFTH100UAR | Panasonic | SMD,D4xL5.8mm | 10uF ±20% 50V aluminium electrolytic 105C | 0.1811 | 1.45 | [C242129](https://www.lcsc.com/product-detail/C242129.html) |
 | C73 | 1 | 22uF | EEEFN1E220R | Panasonic | SMD,D4xL5.8mm | 22uF ±20% 25V aluminium electrolytic 105C | 0.1796 | 0.18 | [C494818](https://www.lcsc.com/product-detail/C494818.html) |
 | R16, R18, R20, R26, R27, R30, R35, R36, R39, R45, R46, R50, R55, R56, R60, R76 | 16 | 100K | FRC0603J104TS | FOJAN | 0603 | 100kOhm ±5% 100mW 0603 | 0.0019 | 0.03 | [C2907088](https://www.lcsc.com/product-detail/C2907088.html) |
-| R4, R12, R67, R68, R69, R70, R71 | 7 | 10K | CRCW060310K0FKEA | VISHAY | 0603 | 10kOhm ±1% 100mW 0603 | 0.0057 | 0.04 | [C844918](https://www.lcsc.com/product-detail/C844918.html) |
+| R4, R12, R67, R68, R69, R70, R71, R77 | 8 | 10K | CRCW060310K0FKEA | VISHAY | 0603 | 10kOhm ±1% 100mW 0603 | 0.0057 | 0.05 | [C844918](https://www.lcsc.com/product-detail/C844918.html) |
 | R21, R22, R23, R24, R31, R32, R33, R34, R40, R41, R42, R43, R51, R52, R53, R54, R61, R62, R63, R64 | 20 | 3.3R | FRC0805J3R3TS | FOJAN | 0805 | 3.3Ohm ±5% 125mW 0805 | 0.0037 | 0.07 | [C2907317](https://www.lcsc.com/product-detail/C2907317.html) |
 | R15 | 1 | 3.3R | FRC0603F3R30TS | FOJAN | 0603 | 3.3Ohm ±1% 100mW 0603 | 0.0025 | 0.00 | [C2930016](https://www.lcsc.com/product-detail/C2930016.html) |
 | R25, R44, R49, R59 | 4 | 100R | FRC0603F1000TS | FOJAN | 0603 | 100Ohm ±1% 100mW 0603 | 0.0021 | 0.01 | [C2906981](https://www.lcsc.com/product-detail/C2906981.html) |
@@ -165,14 +165,14 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 | Q1 | 1 | BSS138 | BSS138 | Shikues | SOT-23 | N-channel logic-level MOSFET 50V 0.2A | 0.0191 | 0.02 | [C112239](https://www.lcsc.com/product-detail/C112239.html) |
 | R19 | 1 | 20K | FRC0603F2002TS | FOJAN | 0603 | 20kOhm ±1% 100mW 0603 | 0.0020 | 0.00 | [C2907011](https://www.lcsc.com/product-detail/C2907011.html) |
 | R8, R9, R10, R11 | 4 | 470R | 0603WAF4700T5E | UNI-ROYAL | 0603 | 470Ohm ±1% 100mW 0603 | 0.0010 | 0.00 | [C23179](https://www.lcsc.com/product-detail/C23179.html) |
-| R14 | 1 | 220R | 0603WAF2200T5E | UNI-ROYAL | 0603 | 220Ohm ±1% 100mW 0603 | 0.0010 | 0.00 | [C22962](https://www.lcsc.com/product-detail/C22962.html) |
+| R14, R78 | 2 | 220R | 0603WAF2200T5E | UNI-ROYAL | 0603 | 220Ohm ±1% 100mW 0603 | 0.0010 | 0.00 | [C22962](https://www.lcsc.com/product-detail/C22962.html) |
 | R66 | 1 | 205K | FRC0603F2053TS | FOJAN | 0603 | 205kOhm ±1% 100mW 0603 | 0.0008 | 0.00 | [C5126104](https://www.lcsc.com/product-detail/C5126104.html) |
 | R75 | 1 | 60.4K | 0603WAF6042T5E | UNI-ROYAL | 0603 | 60.4kOhm ±1% 100mW 0603 | 0.0009 | 0.00 | [C23089](https://www.lcsc.com/product-detail/C23089.html) |
 | R74 | 1 | 11.5K | FRC0603F1152TS | FOJAN | 0603 | 11.5kOhm ±1% 100mW 0603 | 0.0009 | 0.00 | [C2930057](https://www.lcsc.com/product-detail/C2930057.html) |
 | R13 | 1 | 10.7K | 0603WAF1072T5E | UNI-ROYAL | 0603 | 10.7kOhm ±1% 100mW 0603 | 0.0010 | 0.00 | [C22857](https://www.lcsc.com/product-detail/C22857.html) |
 | L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12 | 12 | 10uH/10A | SMDRH104R-100MT | cjiang | SMD,10.4x10.3mm | 10uH ±20% 3.8A rated / 5.6A sat / 35mOhm | 0.1916 | 2.30 | [C9935](https://www.lcsc.com/product-detail/C9935.html) |
 | L13, L14, L15, L16, L17, L18, L19, L20 | 8 | 10uH/3A | FHD4020S-100MT | cjiang | SMD,4x4mm | 10uH ±20% 2.35A rated / 3.5A sat / 190mOhm | 0.1102 | 0.88 | [C602032](https://www.lcsc.com/product-detail/C602032.html) |
-| L21 | 1 | 6.8uH/9A | VLS6045EX-6R8M | TDK | SMD,6x6mm | 6.8uH ±20% 3.6A rated / 4.7A sat / 36mOhm | 0.1262 | 0.13 | [C415364](https://www.lcsc.com/product-detail/C415364.html) |
+| L21 | 1 | 6.8uH/5A | MWSA0603S-6R8MT | Sunlord | SMD,7x6.6mm | 6.8uH ±20% 5.0A rated / 6.0A sat / 48mOhm molded | 0.1007 | 0.10 | [C408449](https://www.lcsc.com/product-detail/C408449.html) |
 | U4 | 1 | TPS54540DDAR | TPS54540DDAR | Texas Instruments | SOIC-8-EP | 42V 5A step-down converter | 1.4638 | 1.46 | [C95286](https://www.lcsc.com/product-detail/C95286.html) |
 | CR2 | 1 | STPS30M60DJF-TR | STPS30M60DJF-TR | ST | PowerFLAT(5x6) | 60V 30A Schottky | 1.2169 | 1.22 | [C154533](https://www.lcsc.com/product-detail/C154533.html) |
 | U10 | 1 | LP5907MFX-4.5 | LP5907MFX-4.5/NOPB | Texas Instruments | SOT-23-5 | 4.5V LDO | 0.5581 | 0.56 | [C529554](https://www.lcsc.com/product-detail/C529554.html) |
@@ -183,7 +183,8 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 | U5, U14 | 2 | PCM5102A | PCM5102APWR | Texas Instruments | TSSOP-20 | I2S stereo DAC | 1.3577 | 2.72 | [C107671](https://www.lcsc.com/product-detail/C107671.html) |
 | U27 | 1 | TPS2041B | TPS2041BDBVR | Texas Instruments | SOT-23-5 | 500mA current-limited power switch | 0.3173 | 0.32 | [C51386](https://www.lcsc.com/product-detail/C51386.html) |
 | U6 | 1 | RT9742SNGV | RT9742SNGV | RICHTEK | SOT-23-3 | 500mA high-side switch | 0.4386 | 0.44 | [C3235509](https://www.lcsc.com/product-detail/C3235509.html) |
-| U8, U9 | 2 | 74LVC1G07 | SN74LVC1G07DBVR | Texas Instruments | SOT-23-5 | Open-drain buffer 1.65-5.5V | 0.1109 | 0.22 | [C7829](https://www.lcsc.com/product-detail/C7829.html) |
+| U9 | 1 | 74LVC1G07 | SN74LVC1G07DBVR | Texas Instruments | SOT-23-5 | Open-drain buffer 1.65-5.5V | 0.1109 | 0.11 | [C7829](https://www.lcsc.com/product-detail/C7829.html) |
+| TP1–TP21, TP23–TP25 | 24 | TestPoint | — | — | 3.0x3.0mm pad / D2.5mm pad / D2.0mm plated hole | Bare copper - nothing to buy. 3 top, 4 plated through-hole, 17 on the bottom layer | 0.0000 | 0.00 | — |
 | U28 | 1 | ESP32-WROVER-E-N16R8 | ESP32-WROVER-E-N16R8 | ESPRESSIF | SMD,31.4x18mm | WiFi/BT module 16MB flash 8MB PSRAM | 5.7127 | 5.71 | [C529589](https://www.lcsc.com/product-detail/C529589.html) |
 | U22 | 1 | MPU-6050 | MPU-6050 | TDK InvenSense | QFN-24-EP(4x4) | 6-axis IMU | 6.3857 | 6.39 | [C24112](https://www.lcsc.com/product-detail/C24112.html) |
 | U23 | 1 | BME680 | BME680 | Bosch | LGA-8 | Environmental sensor | 8.0629 | 8.06 | [C125972](https://www.lcsc.com/product-detail/C125972.html) |
@@ -202,7 +203,7 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 | SW6 | 1 | SW_DPDT_x2 | JS202011JCQN | C&K | SMD | Slide switch DPDT 300mA@6V | 1.0884 | 1.09 | [C221665](https://www.lcsc.com/product-detail/C221665.html) |
 | U1 | 1 | CM4102008 | CM4102008 | Raspberry Pi | - | Compute Module 4 | 124.9100 | 124.91 | — |
 
-**Board subtotal: $195.25 per board**
+**Board subtotal: $195.14 per board**
 
 ### Off-Board / Mechanical
 
@@ -220,11 +221,14 @@ Quantities are **per board**. Prices are LCSC unit pricing at low volume and dro
 |---|---|---|
 | C100, C101, C129 | CHANGED + FOOTPRINT | Was 10uF/25V 0603 on the 24V rail. 10uF/50V does not exist in 0603 - the footprint has to go to 1210 |
 | C191, C192 | CHANGED + FOOTPRINT | TPS54540 output bulk. 47uF does not exist in 0603 or 0805 at >=16V - footprint has to go to 1210 |
-| U8, U9 | CHANGED + FOOTPRINT | Change the footprint to SOT-23-5 - same footprint already used by U10/U11/U27 and the symbol pin numbering is unchanged (1=NC 2=A 3=GND 4=Y 5=VCC). 64k in stock. MUST stay LVC: AHC needs VIH 3.5V at 5V and AUP maxes at 3.6V so neither works for U8. Budget alt C7394020 (UMW) |
+| L21 | CHANGED - NO PCB CHANGE | Was VLS6045EX-6R8M (C415364), 3.6A rated / 4.7A sat. Ripple is 1.23A p-p, so peak hits 4.72A at a 4.1A load - it saturated with zero margin. Now MWSA0603S-6R8MT, 5.0A rated / 6.0A sat. The 7x6.6mm body fits inside the existing 7.50x6.80mm courtyard (R13 is 4.38mm clear), so the land pattern is unchanged. Alternates: [C5349706](https://www.lcsc.com/product-detail/C5349706.html) APH0630T6R8M or [C167221](https://www.lcsc.com/product-detail/C167221.html) FXL0630-6R8-M |
+| U8 | DELETED | U8 buffered CM4 RUN_PG into the GLOBAL_EN button, forming a feedback loop that repeatedly power-cycled the module. Removed. SW1 now goes straight to GPIO3/GND as a soft power button (`dtoverlay=gpio-shutdown`), with R77 as pull-up and C74 as debounce |
+| U9 | CHANGED - FOOTPRINT | Footprint is SOT-23-5, same as U10/U11/U27; symbol pin numbering unchanged (1=NC 2=A 3=GND 4=Y 5=VCC). MUST stay LVC. Budget alt C7394020 (UMW) |
+| R77, R78, C74, TP1, TP2 | NEW | Power-button circuit. R77 10K pulls GPIO3 to 3V3, C74 100nF debounces it, R78 220R feeds TP1 for CM4 reset (220R is the value the CM4 datasheet specifies), TP2 exposes GLOBAL_EN for a hard force-off |
 | D2, D5, D6, D7 | KEEP - RAIL ISSUE | Datasheet minimum VDD is 3.5V and these sit on the 3.3V rail. See review B5 |
 | J1 | VERIFY | Footprint is drawn for the Stewart SS-53200-001 but the sourced part is SHOU HAN - confirm the land patterns match before ordering |
 | J5, J6, J7, J8, J9, J10, J11, J12, J13, J14 | KEEP - MARGINAL | Rated 3A but a 50W/4ohm woofer channel draws 3.5A RMS. See review H9 |
 | J2 | KEEP - VERIFY RATING | Confirm its current rating against the ~8A this board can draw at full output |
 | U1 | NOT ON LCSC | Source from an approved Raspberry Pi reseller. Schematic says CM4102008 but the old BOM said CM4102016 - pick one |
 
-## Total: $432.11 USD per complete unit
+## Total: $432.00 USD per complete unit

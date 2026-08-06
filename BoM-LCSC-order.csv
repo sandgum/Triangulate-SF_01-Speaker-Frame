@@ -1,0 +1,64 @@
+LCSC Part Number,Manufacturer Part Number,Manufacturer,Quantity,Value,Package,Description,Designators,Unit Price(USD),Ext Price(USD),Notes
+C1591,CL10B104KB8NNNC,Samsung Electro-Mechanics,35,100nF,0603,100nF ±10% 50V X7R 0603,C1;C4;C5;C7;C9;C14;C17;C19;C23;C26;C28;C31;C34;C37;C38;C39;C42;C43;C45;C47;C50;C53;C72;C74;C80;C81;C106;C109;C135;C138;C163;C166;C185;C186;C189,0.0142,0.50,50V is fine on the 24V VSYS rail. C74 added as the GPIO3 power-button debounce cap
+C163508,CL10C102JB8NNNC,Samsung Electro-Mechanics,30,1nF,0603,1nF ±5% 50V C0G 0603,C49;C52;C61;C62;C67;C68;C79;C82;C92;C93;C94;C95;C107;C108;C119;C120;C121;C122;C136;C137;C149;C150;C151;C152;C164;C165;C177;C178;C179;C180,0.0076,0.23,
+C29936,CL10B105KA8NNNC,Samsung Electro-Mechanics,25,1uF,0603,1uF ±10% 25V X7R 0603,C2;C8;C12;C13;C40;C41;C44;C46;C48;C75;C76;C77;C102;C103;C105;C131;C132;C134;C157;C158;C159;C160;C162;C188;C190,0.0218,0.55,Highest applied voltage is ~7V (GVDD); 25V is ample
+C85973,GRM1885C1H103JA01D,muRata,21,10nF,0603,10nF ±5% 50V C0G 0603,C24;C63;C64;C69;C70;C96;C97;C98;C99;C123;C124;C125;C126;C153;C154;C155;C156;C181;C182;C183;C184,0.0547,1.15,Zobel networks + VSYS bypass; 50V OK
+C64705,CL10B224KB8NNNC,Samsung Electro-Mechanics,20,220nF,0603,220nF ±10% 50V X7R 0603,C55;C56;C57;C58;C84;C85;C86;C87;C111;C112;C113;C114;C141;C142;C143;C144;C169;C170;C171;C172,0.0121,0.24,Class-D bootstrap caps; TI asks for >=16V so 50V is fine
+C694504,CGA3E3X5R1H684KT0Y0N,TDK,20,680nF,0603,680nF ±10% 50V X5R 0603,C59;C60;C65;C66;C88;C89;C90;C91;C115;C116;C117;C118;C145;C146;C147;C148;C173;C174;C175;C176,0.1052,2.10,Was 25V on a node that idles at 12V and swings to 24V. X5R not X7R - if you can enlarge to 0805 then C107133 is a better and cheaper part
+C47023115,RVT35V220M6X8,JIERR,10,220uF,"SMD,D6.3xL7.7mm",220uF ±20% 35V aluminium electrolytic 105C,C51;C54;C78;C83;C104;C110;C133;C139;C161;C167,0.1003,1.00,Was a 220uF 6.3V TANTALUM on the 24V rail. 35V alu elec = 69% utilisation and D6.3 fits the existing footprint. Ripple rating is 195mA@120Hz - see notes
+C242129,EEEFTH100UAR,Panasonic,9,10uF,"SMD,D4xL5.8mm",10uF ±20% 50V aluminium electrolytic 105C,C3;C15;C16;C18;C22;C25;C27;C32;C33,0.1811,1.63,On VSYS (24V). Old BOM mapped this to a 6.3V 0402 ceramic - wrong voltage and wrong footprint | On 3V3/3V3_A. Same part as C3 to keep it to one line; 50V is overkill here but simplifies ordering
+C16033,CL10B222KB8NNNC,Samsung Electro-Mechanics,5,2.2nF,0603,2.2nF ±10% 50V X7R 0603,C10;C11;C35;C36;C71,0.0061,0.03,PCM5102A output filter
+C57895,CL10A225KA8NNNC,Samsung Electro-Mechanics,4,2.2uF,0603,2.2uF ±10% 25V X5R 0603,C20;C21;C29;C30,0.0231,0.09,PCM5102A charge pump
+C77102,GRM32ER71H106KA12L,muRata,3,10uF/50V,1210,10uF ±10% 50V X7R 1210,C100;C101;C129,0.3758,1.13,Was 10uF/25V 0603 on the 24V rail. 10uF/50V does not exist in 0603 - the footprint has to go to 1210
+C77101,GRM32ER61C476KE15L,muRata,2,47uF,1210,47uF ±10% 16V X5R 1210,C191;C192,0.4273,0.85,TPS54540 output bulk. 47uF does not exist in 0603 or 0805 at >=16V - footprint has to go to 1210
+C86295,CL10A226MP8NUNE,Samsung Electro-Mechanics,1,22uF,0603,22uF ±20% 10V X5R 0603,C6,0.0825,0.08,On the 3V3 rail
+C519114,CC0603BRNPO9BN6R8,YAGEO,1,6.8pF,0603,6.8pF 50V NP0 0603,C187,0.0038,0.00,TPS54540 COMP high-frequency pole
+C907758,GRM1885C1H752JA01D,muRata,1,7.5nF,0603,7.5nF ±5% 50V C0G 0603,C130,0.0156,0.02,TPS54540 COMP zero. Only ~1.3k in stock
+C494818,EEEFN1E220R,Panasonic,1,22uF,"SMD,D4xL5.8mm",22uF ±20% 25V aluminium electrolytic 105C,C73,0.1796,0.18,On VBUS (5V). Old BOM mapped this to a CASE-M tantalum and an 0603 ceramic - neither fits a D4 footprint
+C154533,STPS30M60DJF-TR,ST,1,STPS30M60DJF-TR,PowerFLAT(5x6),60V 30A Schottky,CR2,1.2169,1.22,TPS54540 catch diode. ONLY 18 IN STOCK - buy for all builds now or line up a second source
+C126837,SP3010-04UTG,Littelfuse,1,SP3010-04UTG,UFDFN-10(1x2.5),4-channel TVS array,CR1,0.2544,0.25,
+C52917433,WS2812B-V6,Worldsemi,4,WS2812B,SMD5050-4P,Addressable RGB LED,D2;D5;D6;D7,0.1009,0.40,Datasheet minimum VDD is 3.5V and these sit on the 3.3V rail. See review B5
+C19171394,YLED0603B,YONGYUTAI,2,LED,0603,Blue LED 2.6-3.2V,D3;D4,0.0058,0.01,Only ~0.4mA through 1k from 3V3 - very dim; consider 220R
+C2848697,SMAJ26A,GOODWORK,1,SMAJ26A,DO-214AC(SMA),26V unidirectional TVS 400W Vbr 28.9V Vc 42.1V@9.5A,D1,0.0333,0.03,VSYS input transient protection at J2 - cathode to VSYS anode to GND. Vbr 28.9V sits just under the TPA3116 30V abs max; the 42.1V figure is at the full 9.5A pulse and real hot-plug ringing clamps nearer 30V. NOT a hard guarantee - avalanche TVS cannot stand off 26V and clamp below 30V. MUST be paired with a series fuse (~10A slow-blow) upstream or it will fail short under sustained overvoltage; the fuse also makes it reverse-polarity protection
+C157931,S2B-XH-A(LF)(SN),JST,10,Speaker out,TH Right Angle P=2.5mm,2-position 2.5mm header 3A,J5;J6;J7;J8;J9;J10;J11;J12;J13;J14,0.0615,0.61,Rated 3A but a 50W/4ohm woofer channel draws 3.5A RMS. See review H9
+C2858275,HDMI 19PIN 043,SHOU HAN,1,SS-53200-001,SMD,HDMI-A receptacle right angle,J1,0.1365,0.14,Footprint is drawn for the Stewart SS-53200-001 but the sourced part is SHOU HAN - confirm the land patterns match before ordering
+C2765186,TYPE-C 16PIN 2MD(073),SHOU HAN,1,USB_C_Receptacle_USB2.0_16P,SMD,USB-C receptacle 16P,J15,0.0707,0.07,
+C2691448,PZ254V-11-04P,XFCN,1,UART,TH P=2.54mm,4-position 2.54mm header,J3,0.0254,0.03,
+C9935,SMDRH104R-100MT,cjiang,12,10uH/10A,"SMD,10.4x10.3mm",10uH ±20% 3.8A rated / 5.6A sat / 35mOhm,L1;L2;L3;L4;L5;L6;L7;L8;L9;L10;L11;L12,0.1916,2.30,Was PSPMAA0805 which is 8.5x8mm and does not match the 10.4x10.4 footprint. 3.8A vs 3.5A RMS at sustained 2x50W/4ohm is tight but fine for music
+C602032,FHD4020S-100MT,cjiang,8,10uH/3A,"SMD,4x4mm",10uH ±20% 2.35A rated / 3.5A sat / 190mOhm,L13;L14;L15;L16;L17;L18;L19;L20,0.1102,0.88,Was ANR4020T100M at 1.2A which was under-rated against 1.37A RMS. This has 1.7x margin. 190mOhm means ~0.36W at sustained full power
+C408449,MWSA0603S-6R8MT,Sunlord,1,6.8uH/5A,"SMD,7x6.6mm",6.8uH ±20% 5.0A rated / 6.0A sat / 48mOhm molded,L21,0.1007,0.10,"REPLACES VLS6045EX-6R8M (C415364, 3.6A rated / 4.7A sat) which saturated at full load: ripple 1.23A p-p, peak 4.72A at 4.1A load vs 4.7A sat = zero margin. Body 7x6.6mm fits inside the existing 7.50x6.80mm courtyard, nearest neighbour R13 is 4.38mm clear - NO PCB CHANGE NEEDED. Verify terminal overlap on the generic 1.5x2.4mm pads at +/-2.75mm. Alternates: C5349706 APH0630T6R8M (5A/6A, $0.061) or C167221 FXL0630-6R8-M (cjiang, 5A, 125k stock, matches the other 20 inductors' manufacturer)"
+C112239,BSS138,Shikues,1,BSS138,SOT-23,N-channel logic-level MOSFET 50V 0.2A,Q1,0.0191,0.02,Grounds the Rd common node in device mode. G to USB_OTG_ID (high in device mode via SW6) S to GND D to the R3/R65 common node. Must be logic-level - the gate only sees 3.3V
+C2907317,FRC0805J3R3TS,FOJAN,20,3.3R,0805,3.3Ohm ±5% 125mW 0805,R21;R22;R23;R24;R31;R32;R33;R34;R40;R41;R42;R43;R51;R52;R53;R54;R61;R62;R63;R64,0.0037,0.07,Zobel resistors - 125mW; worth checking against your actual switching residual
+C2907088,FRC0603J104TS,FOJAN,16,100K,0603,100kOhm ±5% 100mW 0603,R16;R18;R20;R26;R27;R30;R35;R36;R39;R45;R46;R50;R55;R56;R60;R76,0.0019,0.03,TI specifies 5% or better for the GAIN divider so this is acceptable
+C844918,CRCW060310K0FKEA,VISHAY,8,10K,0603,10kOhm ±1% 100mW 0603,R4;R12;R67;R68;R69;R70;R71;R77,0.0057,0.05,R77 added as the GPIO3 pull-up to 3V3 for the power button
+C2906981,FRC0603F1000TS,FOJAN,4,100R,0603,100Ohm ±1% 100mW 0603,R25;R44;R49;R59,0.0021,0.01,"TPA31xx SYNC series damping, master U17 to the four slaves. Replaces the 10k that formed a 15.9kHz low-pass with C127/C128/C140/C168 and blocked the 400kHz clock entirely. Those four 1nF caps are now deleted"
+C2907042,FRC0603F4702TS,FOJAN,4,47K,0603,47kOhm ±1% 100mW 0603,R28;R37;R47;R57,0.0023,0.01,GAIN/SLV divider - slave 26dB
+C2907067,FRC0603F7502TS,FOJAN,4,75K,0603,75kOhm ±1% 100mW 0603,R29;R38;R48;R58,0.0025,0.01,GAIN/SLV divider - slave 26dB
+C2907002,FRC0603F1001TS,FOJAN,4,1K,0603,1kOhm ±1% 100mW 0603,R5;R6;R72;R73,0.0014,0.01,
+C23179,0603WAF4700T5E,UNI-ROYAL,4,470R,0603,470Ohm ±1% 100mW 0603,R8;R9;R10;R11,0.0010,0.00,Was BLM18PG471SN1D which is a FERRITE BEAD. This is the series R in the PCM5102A 470R+2.2nF output filter - a bead removes the filter entirely
+C2907005,FRC0603F2201TS,FOJAN,2,2.2K,0603,2.2kOhm ±1% 100mW 0603,R1;R2,0.0023,0.00,HDMI DDC pull-ups
+C2907044,FRC0603F5101TS,FOJAN,2,5.1K,0603,5.1kOhm ±1% 100mW 0603,R3;R65,0.0023,0.00,USB-C CC Rd. Now switched to GND through Q1 so it disconnects in host mode
+C23206,0603WAF5602T5E,UNI-ROYAL,2,56K,0603,56kOhm ±1% 100mW 0603,R7;R17,0.0081,0.02,USB-C CC Rp - CC1/CC2 to VBUS. 56k to 5V is the Type-C value for Default USB current which matches the TPS2041B 500mA limit. Do not substitute 22k or 10k
+C22962,0603WAF2200T5E,UNI-ROYAL,2,220R,0603,220Ohm ±1% 100mW 0603,R14;R78,0.0010,0.00,R14 was MPZ1608S221ATA00 which is a FERRITE BEAD - needs to be a resistor to damp the WS2812B data line. R78 added in series with CM4 RUN_PG to TP1 - 220R is the value the CM4 datasheet specifies for a reset input
+C2930016,FRC0603F3R30TS,FOJAN,1,3.3R,0603,3.3Ohm ±1% 100mW 0603,R15,0.0025,0.00,VSYS snubber with C43
+C2907011,FRC0603F2002TS,FOJAN,1,20K,0603,20kOhm ±1% 100mW 0603,R19,0.0020,0.00,GAIN/SLV divider - master 26dB
+C5126104,FRC0603F2053TS,FOJAN,1,205K,0603,205kOhm ±1% 100mW 0603,R66,0.0008,0.00,TPS54540 RT/CLK - sets ~473kHz
+C23089,0603WAF6042T5E,UNI-ROYAL,1,60.4K,0603,60.4kOhm ±1% 100mW 0603,R75,0.0009,0.00,TPS54540 feedback high side - gives 5.00V
+C2930057,FRC0603F1152TS,FOJAN,1,11.5K,0603,11.5kOhm ±1% 100mW 0603,R74,0.0009,0.00,TPS54540 feedback low side
+C22857,0603WAF1072T5E,UNI-ROYAL,1,10.7K,0603,10.7kOhm ±1% 100mW 0603,R13,0.0010,0.00,TPS54540 COMP
+C221675,KMR211GLFS,C&K,3,Tactile,SMD,Tactile switch SPST-NO,SW2;SW3;SW4,0.6377,1.91,PI_BOOT / ESP_BOOT / ESP_RESET
+C221767,KSC921JLFS,C&K,1,POWER,"SMD,6.2x6.2mm",Tactile switch SPST,SW1,0.7270,0.73,
+C221665,JS202011JCQN,C&K,1,SW_DPDT_x2,SMD,Slide switch DPDT 300mA@6V,SW6,1.0884,1.09,USB host/device mode select
+C2651909,TS5A3159AYZPR,Texas Instruments,7,TS5A3159AYZPR,WCSP-6(1.4x0.9),SPDT analog switch,U12;U13;U15;U16;U24;U25;U26,0.3971,2.78,ONLY 100 IN STOCK and you need 7 per board - buy for all builds now. This DSBGA package needs ENIG not HASL
+C50144,TPA3116D2DADR,Texas Instruments,3,TPA3116D2DAD,HTSSOP-32-6.1mm,2x50W@4ohm Class D amplifier,U17;U18;U19,1.0619,3.19,Swapped from C2865736 (1.1k stock) to C50144 (33k stock) - same DAD package. NOTE the footprint still has no thermal pad - review finding B2
+C106794,TPD4E02B04DQAR,Texas Instruments,3,TPD4E02B04DQA,USON-10(1x2.5),4-channel ESD array,U2;U3;U7,0.0996,0.30,
+C95206,TPA3130D2DAPR,Texas Instruments,2,TPA3130D2DAPR,HTSSOP-32-EP-6.1mm,2x15W@8ohm Class D amplifier,U20;U21,0.6314,1.26,Only 284 in stock
+C107671,PCM5102APWR,Texas Instruments,2,PCM5102A,TSSOP-20,I2S stereo DAC,U5;U14,1.3577,2.72,Swapped from C1520792 (151 stock) to the reel part C107671 (1.9k stock)
+C95286,TPS54540DDAR,Texas Instruments,1,TPS54540DDAR,SOIC-8-EP,42V 5A step-down converter,U4,1.4638,1.46,Replaces the LM1085 linear regulator
+C529554,LP5907MFX-4.5/NOPB,Texas Instruments,1,LP5907MFX-4.5,SOT-23-5,4.5V LDO,U10,0.5581,0.56,Supplies the 4V5_A analog-switch rail. 254 in stock
+C23380874,LP5907MFX-3.3,Texas Instruments,1,LP5907MFX-3.3,SOT-23-5,3.3V LDO,U11,0.1343,0.13,Supplies 3V3_A to the two DACs
+C51386,TPS2041BDBVR,Texas Instruments,1,TPS2041B,SOT-23-5,500mA current-limited power switch,U27,0.3173,0.32,
+C3235509,RT9742SNGV,RICHTEK,1,RT9742SNGV,SOT-23-3,500mA high-side switch,U6,0.4386,0.44,HDMI +5V source
+C7829,SN74LVC1G07DBVR,Texas Instruments,1,74LVC1G07,SOT-23-5,Open-drain buffer 1.65-5.5V,U9,0.1109,0.11,U8 DELETED - it buffered CM4 RUN_PG into the GLOBAL_EN button and formed a feedback loop that power-cycled the module. SW1 now goes straight to GPIO3/GND. U9 (power LED buffer on 3V3) is unaffected. Footprint SOT-23-5
+C529589,ESP32-WROVER-E-N16R8,ESPRESSIF,1,ESP32-WROVER-E-N16R8,"SMD,31.4x18mm",WiFi/BT module 16MB flash 8MB PSRAM,U28,5.7127,5.71,
+C597931,DF40C-100DS-0.4V(51),Hirose,2,CM4 socket,"SMD,P=0.4mm","100-pin 0.4mm board-to-board receptacle, 1.5mm stack height",U1(x2),0.8457,1.69,"Replaces the CM4 module in this order - the U1 footprint is TWO 100-pin connectors so qty is 2. 1.5mm stack height is correct: nothing sits on the top layer under the CM4 courtyard (x 161.29-201.79, y 57.65-113.15). Same connector the official CM4IO carrier uses. The 3.0mm DF40HC(3.0)-100DS-0.4V C424649 is only needed if you later place parts under the module"
