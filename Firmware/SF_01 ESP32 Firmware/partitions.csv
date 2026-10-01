@@ -1,0 +1,7 @@
+# Bluedroid with A2DP is a large binary; the stock 1 MB factory partition
+# is not big enough. 2 MB fits comfortably in the 4 MB devboard flash and
+# in the 16 MB WROVER-E-N16R8 on the real board.
+# Name,     Type, SubType,  Offset,   Size
+nvs,        data, nvs,      0x9000,   0x6000
+phy_init,   data, phy,      0xf000,   0x1000
+factory,    app,  factory,  0x10000,  0x200000

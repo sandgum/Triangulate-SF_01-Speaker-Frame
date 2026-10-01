@@ -1,8 +1,40 @@
-# Override some defaults so BT stack is enabled and
-# Classic BT is enabled and BT_DRAM_RELEASE is disabled
+# --- target ---------------------------------------------------------------
+CONFIG_IDF_TARGET="esp32"
+
+# --- Bluetooth: dual mode (A2DP over BR/EDR + BLE GATT control) -----------
+# A2DP is a Classic profile and the EQ control service is BLE, so the
+# controller runs in BTDM and the coexistence manager shares the radio.
+# Control traffic is small and infrequent, which is the case that coexists
+# cleanly with a streaming A2DP link.
 CONFIG_BT_ENABLED=y
-CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY=y
+CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY=n
+CONFIG_BTDM_CTRL_MODE_BLE_ONLY=n
+CONFIG_BTDM_CTRL_MODE_BTDM=y
 CONFIG_BT_BLUEDROID_ENABLED=y
 CONFIG_BT_CLASSIC_ENABLED=y
 CONFIG_BT_A2DP_ENABLE=y
-CONFIG_DAC_DMA_AUTO_16BIT_ALIGN=n
+CONFIG_BT_SPP_ENABLED=n
+CONFIG_BT_BLE_ENABLED=y
+CONFIG_BT_GATTS_ENABLE=y
+
+# --- flash / partitions ---------------------------------------------------
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# --- performance ----------------------------------------------------------
+# The DSP runs ~8 biquads per channel per sample in float; 240 MHz and -O2
+# leave plenty of headroom.
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_FREERTOS_HZ=1000
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=5120
+
+# NOTE: PSRAM is deliberately left off. The WROVER-E-N16R8 has 8 MB of it,
+# but nothing here needs it, and leaving it off keeps this binary bootable
+# on a plain WROOM-32 devboard for bring-up.
+
+# --- console -------------------------------------------------------------
+# No ANSI colour in logs or the console prompt: the tuning shell runs in
+# dumb-terminal mode so the stream stays plain text for scripts.
+CONFIG_LOG_COLORS=n

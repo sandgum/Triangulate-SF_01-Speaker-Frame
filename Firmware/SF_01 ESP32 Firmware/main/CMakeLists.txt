@@ -1,10 +1,19 @@
-if(CONFIG_EXAMPLE_A2DP_SINK_USE_EXTERNAL_CODEC)
-    set(EXTRA_COMPONENTS a2dp_sink_ext_codec_utils)
-else()
-    set(EXTRA_COMPONENTS a2dp_sink_int_codec_utils)
-endif()
-
-idf_component_register(SRCS "main.c"
-                    PRIV_REQUIRES bt bt_app_core_utils bredr_app_common_utils a2dp_sink_common_utils
-                    PRIV_REQUIRES ${EXTRA_COMPONENTS}
-                    INCLUDE_DIRS ".")
+idf_component_register(
+    SRCS        "main.c"
+                "audio_out.c"
+                "dsp.c"
+                "bt_sink.c"
+                "settings.c"
+                "shell.c"
+                "ble_ctl.c"
+                "led_viz.c"
+                "chime.c"
+    INCLUDE_DIRS "."
+    REQUIRES    bt
+                nvs_flash
+                console
+                esp_driver_i2s
+                esp_driver_gpio
+                esp_driver_ledc
+                esp_ringbuf
+)

@@ -1,15 +1,24 @@
-menu "A2DP Example Configuration"
-    config EXAMPLE_LOCAL_DEVICE_NAME
-        string "Local Device Name"
-        default "ESP_SPEAKER"
-        help
-            Use this option to set local device name.
+menu "SF_01 Speaker"
 
-    config EXAMPLE_A2DP_SINK_USE_EXTERNAL_CODEC
-        bool "Use External Codec Instead of Internal"
-        default n
-        select BT_A2DP_USE_EXTERNAL_CODEC
+    config SF01_BT_DEVICE_NAME
+        string "Bluetooth device name"
+        default "SF_01 Speaker"
         help
-            If enable, Bluedroid stack will not decode A2DP audio data, user need to decode it in application layer.
+            Name shown in the phone's Bluetooth pairing list.
+
+    config SF01_LED_GPIO
+        int "Onboard LED GPIO"
+        default 2
+        range 0 33
+        help
+            Pin for the bass visualiser. GPIO2 is where essentially every
+            generic ESP32 devkit puts its user LED. Retarget at runtime with
+            the `led` shell command if yours differs.
+
+    config SF01_LED_ACTIVE_LOW
+        bool "Onboard LED is active low"
+        default n
+        help
+            Some devkits sink the LED to the pin instead of sourcing it.
 
 endmenu
