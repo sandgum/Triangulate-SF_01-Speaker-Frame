@@ -1,6 +1,6 @@
 # Triangulate-SF_01-Speaker-Frame
 
-*AI Use: No AI was used to generate any journal entries at all. AI was only used for electronics help and parsing some really long chip datasheets*
+*AI Use: No AI was used to generate any journal entries at all. AI was only used for electronics review and firmware help*
 
 ## Description
 The SF_01 is a 24-inch digital picture frame running Android on a Raspberry Pi CM4. The Pi pushes an image to an off-the-shelf IPS monitor from LG through HDMI, and has wireless and USB peripheral support for touch displays, keyboards, and other HIDs.
@@ -11,7 +11,9 @@ The frame itself is 3D-printed, with a large stand secured by VESA mount screws 
 
 The frame has a separate circuit on board for audio playback, with an ESP32-S3 WROOM 2 module at its heart. It decodes a stereo Bluetooth A2DP stream, performs DSP calculations on board, and outputs two different I2S signals (one for the bass-mid woofers, the other for the tweeters).
 
-After going through a DAC, the audio signals are routed through a custom analog multiplexer circuit to all 10 drivers, synamically switching stereo output between drivers depending on the orientation of the frame.
+After going through a DAC, the audio signals are routed through a custom analog multiplexer circuit to all 10 drivers, dynamically switching stereo output between drivers depending on the orientation of the frame.
+
+The ESP32 appears in a device's Bluetooth list as a speaker, and it also runs a GATT server that is controlled by a Bluetooth LE connection via a custom iPhone app. Equalisers and crossovers can be set in the app.
 
 ### Woofer Layout
 
