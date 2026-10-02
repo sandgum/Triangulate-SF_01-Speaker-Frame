@@ -232,3 +232,19 @@ To try and find this short, I doused the entire board with isopropyl alcohol in 
 I then tried to desolder the module using increasingly hotter air, but it would not budge at all as the board under it had way too much thermal mass. Desoldering the module was simply not possible. After that, I decided that the module is faulty anyways, so destructively removing it was my only option left. I used pliers to pry open the grounded shield over the module, which actually came off surprisingly cleanly, leaving the module itself pretty much unharmed. After that, I ran current through 3V3 again just to pinpoint exactly where on the module the short was occurring, and I finally found that the main ESP32 processor itself was the cause of the short. I removed the chip with hot air, and finally, the short was gone!!! Turns out the ESP32 module was defective or had failed at some point during troubleshooting, and I had never tested it.
 
 <img width="4032" height="3024" alt="IMG_0117" src="https://github.com/user-attachments/assets/d72734c6-ac61-46e0-a46d-85e3d974ab69" />
+
+# Devlog 24: Salvaging the board
+
+Thankfully, the ESP32 I had removed had all of its pins broken out to pads on the board, so I could easily solder new wires to them to connect to an off-the-shelf ESP32 devboard. I soldered simple Molex jumper wires that plugged into the devboard, and surprisingly, the I2S lines and audio quality seemed to be completely unaffected by the fact that they were now being routed without ground planes through Molex jumper wires. It's impressive how robust digital audio signals are. After the replacement ESP32 was plugged in, I prototyped some quick firmware that takes in a Bluetooth signal, processes it, and outputs it through the ESP32's two I2S lines. After all of that work, the Bluetooth finally worked! I could now play music through the speakers, and even change the equaliser settings on the fly using a simple Bluetooth LE GATT server hosted on the ESP32.
+
+<img width="4032" height="3024" alt="IMG_0118" src="https://github.com/user-attachments/assets/47322fa5-da2f-4dfb-9f8d-0064e4151f06" />
+
+# Devlog 25: Assembling the SF_01
+
+By now, my school had finally finished 3D-printing the SF_01's humongous pieces, and now it was time to put them together. The main subwoofer box would be glued together with Gorilla Glue, which was chosen as it's airtight and expands to fill all gaps. I laid the pieces of the box on a piece of baking paper, and carefully glued everything together. I then held the pieces together with weights to prevent the glue from pushing them out of alignment.
+
+After the glue had cured, I fit all the speakers and tweeters into their places, and sealed off the open parts of the box using hot glue. Fitting the main board into its recess, there was plenty of space to the side where I could add in the ESP32 and CM4 that were now dangling off the board. I fixed everything in place with tape and hot glue, and they were adequately secured.
+
+Finally, I painted the corner pieces in a nice gold spray paint, and glued them onto the frame. The build was COMPLETE, AND EVERYTHING WORKED!!!
+
+Here's the demo video: https://youtu.be/gdqumSwGTgA
