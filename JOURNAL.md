@@ -205,8 +205,14 @@ Also, I had to remove the JTAG and USB-C pins used for programming the ESP32, as
 
 # Devlog 20: The start of firmware
 
-I don't have enough time to clearly flesh out the firmware for this thing before submitting it to Horizons, so I just started a project with Espressif's Bluetooth A2DP sink template ESP-IDF project. I aim to further develop this firmware with DSP support and sensor support as the main functions.
+I don't have enough time to clearly flesh out the firmware for this thing before submitting it to Stardance, so I just started a project with Espressif's Bluetooth A2DP sink template ESP-IDF project. I aim to further develop this firmware with DSP support and sensor support as the main functions.
 
 <img width="1552" height="1012" alt="image" src="https://github.com/user-attachments/assets/6afcdc92-45ba-490e-b107-1a63fd64442d" />
 
+# Devlog 21: Assembly!!!
 
+The components and board all finally arrived, so I could start assembling the main circuit. I made sure to follow all the best practices in SMD soldering, as I only get one shot at getting this board right. I started with sqeegeeing the solder paste onto the board using a very carefully-positioned stencil, after which I spent 4 hours painstakingly placing each component by hand onto their respective pads. After that, I found out that my PCB reflow hotplate was too small for this board, so I resorted to cooking the board on a barbeque hotplate, which yielded almost perfect solder melting.
+
+<img width="1800" height="1130" alt="image" src="https://github.com/user-attachments/assets/31fb131d-966f-4524-b390-e0ff40dcdcc6" />
+
+<img width="1800" height="1130" alt="image" src="https://github.com/user-attachments/assets/f73ba966-0279-4595-963a-724c4c78b20a" />
