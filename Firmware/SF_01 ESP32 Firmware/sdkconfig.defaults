@@ -38,3 +38,17 @@ CONFIG_ESP_MAIN_TASK_STACK_SIZE=5120
 # No ANSI colour in logs or the console prompt: the tuning shell runs in
 # dumb-terminal mode so the stream stays plain text for scripts.
 CONFIG_LOG_COLORS=n
+
+# --- over-the-air updates -------------------------------------------------
+# A new image boots on probation and is rolled back by the bootloader unless
+# the firmware confirms it (see main/fw_update.h).
+CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=y
+
+# Updates must carry an ECDSA signature made with ota_signing_key.pem, checked
+# against the public key built into the running firmware. This is software
+# verification only: no eFuses are burned and USB flashing is unaffected.
+CONFIG_SECURE_SIGNED_APPS_NO_SECURE_BOOT=y
+CONFIG_SECURE_SIGNED_APPS_ECDSA_SCHEME=y
+CONFIG_SECURE_SIGNED_ON_UPDATE_NO_SECURE_BOOT=y
+CONFIG_SECURE_BOOT_BUILD_SIGNED_BINARIES=y
+CONFIG_SECURE_BOOT_SIGNING_KEY="ota_signing_key.pem"

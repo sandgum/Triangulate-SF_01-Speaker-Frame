@@ -2,6 +2,7 @@
 #include "dsp.h"
 #include "settings.h"
 #include "audio_out.h"
+#include "fw_update.h"
 
 #include <string.h>
 
@@ -25,20 +26,72 @@ static const uint8_t SVC_UUID[16] = UUID128_LE(0x5F, 0x01, 0x00, 0x00);
 static const uint8_t CFG_UUID[16] = UUID128_LE(0x5F, 0x01, 0x00, 0x01);
 /* 5F010002-... */
 static const uint8_t CMD_UUID[16] = UUID128_LE(0x5F, 0x01, 0x00, 0x02);
+/* 5F010003/4/5-... firmware update, see fw_update.h */
+static const uint8_t FWC_UUID[16] = UUID128_LE(0x5F, 0x01, 0x00, 0x03);
+static const uint8_t FWD_UUID[16] = UUID128_LE(0x5F, 0x01, 0x00, 0x04);
+static const uint8_t FWI_UUID[16] = UUID128_LE(0x5F, 0x01, 0x00, 0x05);
 
 enum {
     IDX_SVC,
     IDX_CFG_DECL, IDX_CFG_VAL, IDX_CFG_CCC,
     IDX_CMD_DECL, IDX_CMD_VAL,
+    /* Firmware update. Appended, never inserted: the handles above must not
+     * move, or a phone holding a cached attribute table writes to the wrong
+     * characteristic. */
+    IDX_FWC_DECL, IDX_FWC_VAL, IDX_FWC_CCC,
+    IDX_FWD_DECL, IDX_FWD_VAL,
+    IDX_FWI_DECL, IDX_FWI_VAL,
     IDX_NB,
 };
 
 static uint16_t s_handles[IDX_NB];
 static esp_gatt_if_t s_gatts_if = ESP_GATT_IF_NONE;
-static uint16_t s_conn_id;
-static bool     s_connected;
-static bool     s_notify_on;
-static uint16_t s_mtu = 23;
+
+/*
+ * Two connections, so the Mac can push firmware while the phone app is open.
+ * Each keeps its own MTU and subscriptions.
+ */
+#define MAX_CONNS 2
+
+typedef struct {
+    bool          used;
+    uint16_t      id;
+    esp_bd_addr_t bda;
+    uint16_t      mtu;
+    bool          cfg_notify;
+    bool          fw_notify;
+} conn_t;
+
+static conn_t s_conns[MAX_CONNS];
+static bool   s_advertising;
+
+static conn_t *conn_find(uint16_t id)
+{
+    for (int i = 0; i < MAX_CONNS; i++)
+        if (s_conns[i].used && s_conns[i].id == id) return &s_conns[i];
+    return NULL;
+}
+
+static conn_t *conn_alloc(uint16_t id)
+{
+    for (int i = 0; i < MAX_CONNS; i++) {
+        if (!s_conns[i].used) {
+            memset(&s_conns[i], 0, sizeof(s_conns[i]));
+            s_conns[i].used = true;
+            s_conns[i].id   = id;
+            s_conns[i].mtu  = 23;
+            return &s_conns[i];
+        }
+    }
+    return NULL;
+}
+
+static int conn_count(void)
+{
+    int n = 0;
+    for (int i = 0; i < MAX_CONNS; i++) n += s_conns[i].used ? 1 : 0;
+    return n;
+}
 
 /* ------------------------------------------------------------ wire format */
 
@@ -171,13 +224,24 @@ static void handle_command(const uint8_t *d, uint16_t len)
 static void publish_task(void *arg)
 {
     static uint8_t last[SF01_BLE_CONFIG_LEN];
+    static uint8_t fw_last[FW_INFO_LEN];
     uint8_t now[SF01_BLE_CONFIG_LEN];
+    uint8_t fw_now[FW_INFO_LEN];
 
     build_config(last);
     esp_ble_gatts_set_attr_value(s_handles[IDX_CFG_VAL], sizeof(last), last);
+    fw_update_info(fw_last);
+    esp_ble_gatts_set_attr_value(s_handles[IDX_FWI_VAL], sizeof(fw_last), fw_last);
 
     for (;;) {
         vTaskDelay(pdMS_TO_TICKS(200));
+
+        fw_update_info(fw_now);
+        if (memcmp(fw_now, fw_last, sizeof(fw_now)) != 0) {
+            memcpy(fw_last, fw_now, sizeof(fw_now));
+            esp_ble_gatts_set_attr_value(s_handles[IDX_FWI_VAL], sizeof(fw_now), fw_now);
+        }
+
         build_config(now);
         if (memcmp(now, last, sizeof(now)) == 0) continue;
 
@@ -185,10 +249,13 @@ static void publish_task(void *arg)
         esp_ble_gatts_set_attr_value(s_handles[IDX_CFG_VAL], sizeof(now), now);
 
         /* A notification must fit in MTU-3; below that the phone still reads. */
-        if (s_connected && s_notify_on && s_mtu >= SF01_BLE_CONFIG_LEN + 3)
-            esp_ble_gatts_send_indicate(s_gatts_if, s_conn_id,
-                                        s_handles[IDX_CFG_VAL],
-                                        sizeof(now), now, false);
+        for (int i = 0; i < MAX_CONNS; i++) {
+            const conn_t *c = &s_conns[i];
+            if (c->used && c->cfg_notify && c->mtu >= SF01_BLE_CONFIG_LEN + 3)
+                esp_ble_gatts_send_indicate(s_gatts_if, c->id,
+                                            s_handles[IDX_CFG_VAL],
+                                            sizeof(now), now, false);
+        }
     }
 }
 
@@ -203,9 +270,17 @@ static const uint8_t  PROP_READ_NOTIFY = ESP_GATT_CHAR_PROP_BIT_READ |
 static const uint8_t  PROP_WRITE       = ESP_GATT_CHAR_PROP_BIT_WRITE |
                                          ESP_GATT_CHAR_PROP_BIT_WRITE_NR;
 
+static const uint8_t  PROP_WRITE_NOTIFY = ESP_GATT_CHAR_PROP_BIT_WRITE |
+                                          ESP_GATT_CHAR_PROP_BIT_NOTIFY;
+static const uint8_t  PROP_WRITE_NR     = ESP_GATT_CHAR_PROP_BIT_WRITE_NR;
+static const uint8_t  PROP_READ         = ESP_GATT_CHAR_PROP_BIT_READ;
+
 static uint8_t s_cfg_value[SF01_BLE_CONFIG_LEN];
 static uint8_t s_cmd_value[16];
 static uint8_t s_ccc_value[2] = {0, 0};
+static uint8_t s_fwc_value[8];
+static uint8_t s_fwc_ccc[2] = {0, 0};
+static uint8_t s_fwi_value[FW_INFO_LEN];
 
 static const esp_gatts_attr_db_t ATTR_DB[IDX_NB] = {
     [IDX_SVC] = {{ESP_GATT_AUTO_RSP},
@@ -229,6 +304,33 @@ static const esp_gatts_attr_db_t ATTR_DB[IDX_NB] = {
     [IDX_CMD_VAL] = {{ESP_GATT_AUTO_RSP},
         {ESP_UUID_LEN_128, (uint8_t *)CMD_UUID, ESP_GATT_PERM_WRITE,
          sizeof(s_cmd_value), 0, s_cmd_value}},
+
+    [IDX_FWC_DECL] = {{ESP_GATT_AUTO_RSP},
+        {ESP_UUID_LEN_16, (uint8_t *)&CHAR_DECL_UUID, ESP_GATT_PERM_READ,
+         sizeof(uint8_t), sizeof(uint8_t), (uint8_t *)&PROP_WRITE_NOTIFY}},
+    [IDX_FWC_VAL] = {{ESP_GATT_AUTO_RSP},
+        {ESP_UUID_LEN_128, (uint8_t *)FWC_UUID, ESP_GATT_PERM_WRITE,
+         sizeof(s_fwc_value), 0, s_fwc_value}},
+    [IDX_FWC_CCC] = {{ESP_GATT_AUTO_RSP},
+        {ESP_UUID_LEN_16, (uint8_t *)&CHAR_CCC_UUID,
+         ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+         sizeof(s_fwc_ccc), sizeof(s_fwc_ccc), s_fwc_ccc}},
+
+    /* Image bytes go straight to the application: the stack keeps no copy,
+     * and write-without-response needs no reply. */
+    [IDX_FWD_DECL] = {{ESP_GATT_AUTO_RSP},
+        {ESP_UUID_LEN_16, (uint8_t *)&CHAR_DECL_UUID, ESP_GATT_PERM_READ,
+         sizeof(uint8_t), sizeof(uint8_t), (uint8_t *)&PROP_WRITE_NR}},
+    [IDX_FWD_VAL] = {{ESP_GATT_RSP_BY_APP},
+        {ESP_UUID_LEN_128, (uint8_t *)FWD_UUID, ESP_GATT_PERM_WRITE,
+         512, 0, NULL}},
+
+    [IDX_FWI_DECL] = {{ESP_GATT_AUTO_RSP},
+        {ESP_UUID_LEN_16, (uint8_t *)&CHAR_DECL_UUID, ESP_GATT_PERM_READ,
+         sizeof(uint8_t), sizeof(uint8_t), (uint8_t *)&PROP_READ}},
+    [IDX_FWI_VAL] = {{ESP_GATT_AUTO_RSP},
+        {ESP_UUID_LEN_128, (uint8_t *)FWI_UUID, ESP_GATT_PERM_READ,
+         sizeof(s_fwi_value), sizeof(s_fwi_value), s_fwi_value}},
 };
 
 /* ------------------------------------------------------------------- gap */
@@ -267,7 +369,7 @@ static bool s_adv_cfg_done, s_scan_rsp_done;
 
 static void start_adv_when_ready(void)
 {
-    if (s_adv_cfg_done && s_scan_rsp_done)
+    if (s_adv_cfg_done && s_scan_rsp_done && !s_advertising)
         esp_ble_gap_start_advertising(&s_adv_params);
 }
 
@@ -279,10 +381,12 @@ static void gap_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
     case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
         s_scan_rsp_done = true; start_adv_when_ready(); break;
     case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
-        if (param->adv_start_cmpl.status != ESP_BT_STATUS_SUCCESS)
+        if (param->adv_start_cmpl.status != ESP_BT_STATUS_SUCCESS) {
             ESP_LOGE(TAG, "advertising failed to start");
-        else
+        } else {
+            s_advertising = true;
             ESP_LOGI(TAG, "BLE advertising");
+        }
         break;
     default:
         break;
@@ -316,34 +420,59 @@ static void gatts_cb(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if,
         xTaskCreate(publish_task, "ble_publish", 3072, NULL, 3, NULL);
         break;
 
-    case ESP_GATTS_CONNECT_EVT:
-        s_conn_id   = param->connect.conn_id;
-        s_connected = true;
-        ESP_LOGI(TAG, "phone connected");
-        break;
+    case ESP_GATTS_CONNECT_EVT: {
+        /* The controller stops advertising by itself on every connection. */
+        s_advertising = false;
 
-    case ESP_GATTS_DISCONNECT_EVT:
-        s_connected = false;
-        s_notify_on = false;
-        s_mtu       = 23;
-        ESP_LOGI(TAG, "phone disconnected, advertising again");
-        esp_ble_gap_start_advertising(&s_adv_params);
-        break;
+        conn_t *c = conn_alloc(param->connect.conn_id);
+        if (!c) {
+            esp_ble_gatts_close(gatts_if, param->connect.conn_id);
+            break;
+        }
+        memcpy(c->bda, param->connect.remote_bda, sizeof(esp_bd_addr_t));
+        ESP_LOGI(TAG, "BLE client connected (%d of %d)", conn_count(), MAX_CONNS);
 
-    case ESP_GATTS_MTU_EVT:
-        s_mtu = param->mtu.mtu;
-        ESP_LOGI(TAG, "MTU %u", s_mtu);
+        if (conn_count() < MAX_CONNS) start_adv_when_ready();
         break;
+    }
 
-    case ESP_GATTS_WRITE_EVT:
-        if (param->write.handle == s_handles[IDX_CMD_VAL]) {
+    case ESP_GATTS_DISCONNECT_EVT: {
+        conn_t *c = conn_find(param->disconnect.conn_id);
+        if (c) memset(c, 0, sizeof(*c));
+        fw_update_disconnected(param->disconnect.conn_id);
+        ESP_LOGI(TAG, "BLE client disconnected (%d of %d left)", conn_count(), MAX_CONNS);
+        start_adv_when_ready();
+        break;
+    }
+
+    case ESP_GATTS_MTU_EVT: {
+        conn_t *c = conn_find(param->mtu.conn_id);
+        if (c) c->mtu = param->mtu.mtu;
+        ESP_LOGI(TAG, "MTU %u", param->mtu.mtu);
+        break;
+    }
+
+    case ESP_GATTS_WRITE_EVT: {
+        const uint16_t h = param->write.handle;
+        conn_t *c = conn_find(param->write.conn_id);
+
+        if (h == s_handles[IDX_CMD_VAL]) {
             handle_command(param->write.value, param->write.len);
-        } else if (param->write.handle == s_handles[IDX_CFG_CCC] &&
-                   param->write.len == 2) {
-            s_notify_on = (param->write.value[0] & 0x01) != 0;
-            ESP_LOGI(TAG, "notifications %s", s_notify_on ? "on" : "off");
+        } else if (h == s_handles[IDX_FWD_VAL]) {
+            fw_update_data(param->write.conn_id, param->write.value, param->write.len);
+            if (param->write.need_rsp)
+                esp_ble_gatts_send_response(gatts_if, param->write.conn_id,
+                                            param->write.trans_id, ESP_GATT_OK, NULL);
+        } else if (h == s_handles[IDX_FWC_VAL]) {
+            fw_update_ctrl(param->write.conn_id, param->write.value, param->write.len);
+        } else if (h == s_handles[IDX_CFG_CCC] && param->write.len == 2 && c) {
+            c->cfg_notify = (param->write.value[0] & 0x01) != 0;
+            ESP_LOGI(TAG, "notifications %s", c->cfg_notify ? "on" : "off");
+        } else if (h == s_handles[IDX_FWC_CCC] && param->write.len == 2 && c) {
+            c->fw_notify = (param->write.value[0] & 0x01) != 0;
         }
         break;
+    }
 
     default:
         break;
@@ -360,4 +489,29 @@ esp_err_t ble_ctl_start(void)
     esp_ble_gatt_set_local_mtu(247);
     ESP_LOGI(TAG, "GATT control server starting");
     return ESP_OK;
+}
+
+/* ------------------------------------------------------- firmware update */
+
+void ble_ctl_fw_event(uint16_t conn_id, const uint8_t *data, uint16_t len)
+{
+    const conn_t *c = conn_find(conn_id);
+    if (!c || !c->fw_notify) return;
+    esp_ble_gatts_send_indicate(s_gatts_if, conn_id, s_handles[IDX_FWC_VAL],
+                                len, (uint8_t *)data, false);
+}
+
+void ble_ctl_fast_link(uint16_t conn_id)
+{
+    conn_t *c = conn_find(conn_id);
+    if (!c) return;
+
+    /* 15-30 ms is the shortest interval Apple hosts will grant, and with
+     * 251-byte link packets each 244-byte write goes out as a single PDU. */
+    esp_ble_conn_update_params_t p = {
+        .min_int = 0x0C, .max_int = 0x18, .latency = 0, .timeout = 500,
+    };
+    memcpy(p.bda, c->bda, sizeof(esp_bd_addr_t));
+    esp_ble_gap_update_conn_params(&p);
+    esp_ble_gap_set_pkt_data_len(c->bda, 251);
 }

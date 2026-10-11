@@ -11,6 +11,8 @@
  * Service                              5F010000-A1B2-4C3D-8E4F-5F0100000001
  *   CONFIG   read | notify             5F010001-A1B2-4C3D-8E4F-5F0100000001
  *   COMMAND  write | write-no-rsp      5F010002-A1B2-4C3D-8E4F-5F0100000001
+ *   FW_CTRL / FW_DATA / FW_INFO        5F010003 … 05 — firmware update,
+ *                                      specified in fw_update.h
  *
  * CONFIG is a 78-byte little-endian snapshot of the whole DSP state. It is
  * republished (and notified) whenever anything changes it, including the
@@ -49,6 +51,7 @@
  */
 #pragma once
 
+#include <stdint.h>
 #include "esp_err.h"
 
 #define SF01_BLE_PROTO_VERSION 1
@@ -56,3 +59,8 @@
 
 /* Call after bt_sink_start(); the controller must already be up in BTDM. */
 esp_err_t ble_ctl_start(void);
+
+/* Used by fw_update.c: notify one client on FW_CTRL, and ask that client's
+ * link for the short connection interval a firmware transfer wants. */
+void ble_ctl_fw_event(uint16_t conn_id, const uint8_t *data, uint16_t len);
+void ble_ctl_fast_link(uint16_t conn_id);
