@@ -53,7 +53,13 @@ The ESP32 appears in a device's Bluetooth list as a speaker, and it also runs a 
 * **Centre Channel: (Average of Right and Left):**
 * Woofers 3, 4
 
-## Enclosure Images
+## Built Prototype Images
+<img width="3024" height="4032" alt="IMG_0214" src="https://github.com/user-attachments/assets/11e9a984-a6e5-40d7-a0e2-d92060513fef" />
+<img width="3024" height="4032" alt="IMG_0215" src="https://github.com/user-attachments/assets/d61a6c9a-f654-42c6-9f2f-70f9e0448d4b" />
+<img width="3024" height="4032" alt="IMG_0216" src="https://github.com/user-attachments/assets/6c84d978-fb86-4d5b-b21f-e9ad89f8c7f7" />
+
+
+## 3D Model Images
 <img width="1800" height="1018" alt="Render 1" src="https://github.com/user-attachments/assets/a04897f2-f62e-4ffe-8b50-f99c1e0dd5e2" />
 <img width="1800" height="1018" alt="Render 2" src="https://github.com/user-attachments/assets/c4de3a8d-acc1-4b1d-9af0-68945ec476ff" />
 <img width="1800" height="1018" alt="Render 3" src="https://github.com/user-attachments/assets/7c89f148-860e-4543-81ff-d67332316a94" />
