@@ -8,6 +8,7 @@ idf_component_register(
                 "ble_ctl.c"
                 "led_viz.c"
                 "chime.c"
+                "fw_update.c"
     INCLUDE_DIRS "."
     REQUIRES    bt
                 nvs_flash
@@ -16,4 +17,7 @@ idf_component_register(
                 esp_driver_gpio
                 esp_driver_ledc
                 esp_ringbuf
+                esp_timer
+                app_update
+                esp_app_format
 )

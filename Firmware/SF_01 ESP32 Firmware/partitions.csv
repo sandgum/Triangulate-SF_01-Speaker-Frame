@@ -1,7 +1,16 @@
-# Bluedroid with A2DP is a large binary; the stock 1 MB factory partition
-# is not big enough. 2 MB fits comfortably in the 4 MB devboard flash and
-# in the 16 MB WROVER-E-N16R8 on the real board.
-# Name,     Type, SubType,  Offset,   Size
-nvs,        data, nvs,      0x9000,   0x6000
-phy_init,   data, phy,      0xf000,   0x1000
-factory,    app,  factory,  0x10000,  0x200000
+# Two application slots: an update is written into the idle one while the
+# other keeps running, and the bootloader can fall back if the new image
+# misbehaves. Each slot is 1.94 MB against a ~1.1 MB image.
+#
+# nvs and phy_init are exactly where they were in the single-app layout, so
+# moving to this table keeps the saved tuning and the Bluetooth pairing.
+# otadata (which slot to boot) therefore goes at the end rather than in its
+# usual place before the apps.
+#
+# Fits the 4 MB devboard flash; the 16 MB WROVER-E-N16R8 just has room spare.
+# Name,     Type, SubType,  Offset,    Size
+nvs,        data, nvs,      0x9000,    0x6000
+phy_init,   data, phy,      0xf000,    0x1000
+ota_0,      app,  ota_0,    0x10000,   0x1F0000
+ota_1,      app,  ota_1,    0x200000,  0x1F0000
+otadata,    data, ota,      0x3F0000,  0x2000

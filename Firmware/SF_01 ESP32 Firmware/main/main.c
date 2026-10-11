@@ -11,6 +11,7 @@
 #include "audio_out.h"
 #include "bt_sink.h"
 #include "ble_ctl.h"
+#include "fw_update.h"
 #include "led_viz.h"
 #include "dsp.h"
 #include "settings.h"
@@ -54,6 +55,9 @@ void app_main(void)
     /* Queued, so it rings while the Bluetooth stack comes up rather than
      * delaying boot. */
     audio_out_play_chime(CHIME_STARTUP);
+
+    /* Before BLE comes up, so the update service has its state ready. */
+    ESP_ERROR_CHECK(fw_update_init());
 
     ESP_ERROR_CHECK(bt_sink_start(CONFIG_SF01_BT_DEVICE_NAME));
     ESP_ERROR_CHECK(ble_ctl_start());

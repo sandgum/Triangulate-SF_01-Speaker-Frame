@@ -54,8 +54,8 @@ struct EQGraphView: View {
             .coordinateSpace(name: "graph")
         }
         .frame(height: 230)
-        .background(Color.secondary.opacity(0.07))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .background(Color(.secondarySystemGroupedBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
 
     // MARK: handle

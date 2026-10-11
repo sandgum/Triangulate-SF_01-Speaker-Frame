@@ -36,7 +36,7 @@ final class SpeakerController: NSObject, ObservableObject {
 
     /// The speaker echoes every change back as a notification. While the user
     /// is dragging a slider those echoes arrive a beat late and would yank the
-    /// knob backwards, so remote updates are ignored briefly after a local
+    /// slider backwards, so remote updates are ignored briefly after a local
     /// write. Anything changed elsewhere (the UART shell, AVRCP volume) still
     /// lands as soon as the user stops touching the control.
     private var lastWrite = Date.distantPast

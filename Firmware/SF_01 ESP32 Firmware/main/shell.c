@@ -3,6 +3,7 @@
 #include "settings.h"
 #include "audio_out.h"
 #include "led_viz.h"
+#include "fw_update.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -159,6 +160,28 @@ static int cmd_defaults(int argc, char **argv)
     return 0;
 }
 
+static int cmd_fw(int argc, char **argv)
+{
+    if (argc > 1 && !strcmp(argv[1], "confirm")) {
+        printf(fw_update_confirm() ? "confirmed: this image is now permanent\n"
+                                   : "nothing to confirm\n");
+        return 0;
+    }
+
+    uint8_t i[FW_INFO_LEN];
+    fw_update_info(i);
+    printf("\n  version   %s\n", (const char *)i + 16);
+    printf("  built     %s %s\n", (const char *)i + 48, (const char *)i + 64);
+    printf("  build id  %02x%02x%02x%02x%02x%02x%02x%02x\n",
+           i[8], i[9], i[10], i[11], i[12], i[13], i[14], i[15]);
+    printf("  running   ota_%u\n", i[3]);
+    printf("  state     %s\n", (i[2] & 0x01)
+           ? "ON PROBATION, rolls back unless confirmed ('fw confirm')"
+           : "confirmed");
+    printf("\n");
+    return 0;
+}
+
 static int cmd_chime(int argc, char **argv)
 {
     chime_id_t id = CHIME_STARTUP;
@@ -250,6 +273,7 @@ void shell_start(void)
     reg("save",     "Persist the current tuning to NVS",                cmd_save);
     reg("load",     "Reload the tuning saved in NVS",                   cmd_load);
     reg("defaults", "Restore built-in defaults and erase NVS",          cmd_defaults);
+    reg("fw",       "fw  — firmware version and update state | fw confirm", cmd_fw);
     reg("chime",    "chime [startup|connect|disconnect]  — play a tone",  cmd_chime);
     reg("led",      "led <gpio> [al] | led test <0-100> | led auto",     cmd_led);
     reg("mute",     "Mute amplifiers and DACs",                         cmd_mute);

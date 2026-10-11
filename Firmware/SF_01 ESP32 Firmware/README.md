@@ -160,8 +160,68 @@ they fit even at the 23-byte default ATT MTU. Both formats are specified in
 one, change the other. The version byte is checked on every read, so a mismatch
 surfaces as an explicit error rather than as odd values.
 
-Adding BLE grew the binary from 821 KB to 1.07 MB; the 2 MB partition still has
-49 % free.
+With BLE and the update service the binary is about 1.2 MB, in a 1.94 MB slot.
+
+## Over-the-air updates
+
+Firmware can be pushed over Bluetooth LE from the Mac, with no USB cable:
+
+```bash
+idf.py build && ../sf01-ota/push.sh
+```
+
+`push.sh` sends `build/sf01_speaker.bin`, waits for the speaker to reboot,
+checks it came back running that exact build, and confirms it. It exits 0 only
+if all of that happened. `push.sh --scan` just reports what the speaker is
+running. Bump `PROJECT_VER` in `CMakeLists.txt` for each build you push.
+
+A push takes about 100 s end to end: the 1.18 MB image moves at ~13 kB/s
+(about 90 s), then verification, reboot and confirmation take another ten.
+
+`push.sh --no-confirm` leaves the new image on probation, for trying a build
+before committing to it; `push.sh --confirm` then keeps it.
+
+**The first OTA-capable build has to go on over USB** (`idf.py flash`): it
+changes the partition table, which an update cannot do to itself.
+
+How it fits together (wire protocol in `main/fw_update.h`):
+
+- **Transport.** Three extra characteristics on the existing control service.
+  Image bytes are unacknowledged GATT writes under a sliding window: the
+  speaker acknowledges bytes *written to flash*, so the window is an exact
+  bound on what it must buffer. About 1.2 MB per update.
+- **Two app slots.** `partitions.csv` has `ota_0` and `ota_1` (1.94 MB each).
+  An update is written to the idle slot while the other keeps running. `nvs`
+  stays at its old offset, so the saved tuning and Bluetooth pairing survive
+  the switch to this layout.
+- **Signed images.** `esp_ota_end()` rejects any image not signed with
+  `ota_signing_key.pem` (ECDSA, checked against the public key inside the
+  running firmware). The update service is reachable by anyone in Bluetooth
+  range; the signature is what stops them installing something. The key is
+  git-ignored. **Back it up**: without it, the only way to update a speaker
+  again is a USB flash. This is software verification only: no eFuses are
+  burned and USB flashing still works.
+- **Probation and rollback.** A new image is kept only after a client
+  reconnects over BLE and sends CONFIRM, which proves the new firmware can
+  itself still be updated. If that has not happened 180 s after boot, or the
+  speaker resets first, the bootloader returns to the previous image.
+- **Audio.** The amplifiers are muted for the transfer, because flash writes
+  stall the audio tasks for milliseconds at a time. The speaker then reboots,
+  so the phone has to reconnect its audio afterwards.
+- **Two BLE connections.** The Mac can push while the phone app is connected.
+
+The Mac tool lives in `Firmware/sf01-ota`. It is a small `.app` bundle rather
+than a bare binary, started with `open`: macOS attributes a Bluetooth request
+to the process that launched a bare binary, and kills it if that parent has no
+Bluetooth usage string. As its own app it gets a one-time permission prompt.
+
+Shell: `fw` shows version, build id, slot and probation state; `fw confirm`
+keeps an image that is on probation.
+
+Verified on hardware (ESP32-D0WD-V3, 2026-10-11): a full push and confirm; an
+image signed with the wrong key transferred in full and was refused with
+`image valid, signature bad`; an unconfirmed image rolled back when the 180 s
+timer expired; and an unconfirmed image rolled back on a reset.
 
 ## UI tones
 

@@ -76,3 +76,8 @@ Desktop.ini
 *.workspace # General workspace files, can be from various tools
 *.suo       # Visual Studio Solution User Options
 *.sln.docstates # Visual Studio
+
+# OTA signing key — whoever holds this can push firmware to the speaker.
+# Never commit it.
+ota_signing_key.pem
+*.pem
